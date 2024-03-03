@@ -79,18 +79,24 @@ Private Sub select_file_btn_Click
 End Sub
 
 Private Sub fileaddress_TextChanged (Old As String, New As String)
+	
 	File.WriteString(File.DirApp, "excelurl", New)
-	If New.Length>10 Then
-		
-		File.Copy("", New, File.DirApp, "excel.xlsx")
-		
-		LoadSheet(0)
-		
+	
+	If Not(File.Exists("", New)) Then
+		fileaddress.Text = ""
 	End If
+	
+	If New.Length>10 Then
+		File.Copy("", New, File.DirApp, "excel.xlsx")
+		LoadSheet(0)
+	End If
+	
 End Sub
 
 Private Sub B4XTable1_CellClicked (ColumnId As String, RowId As Long)
-	Log(B4XTable1.GetRow(RowId))
+	Log("Row: "& B4XTable1.GetRow(RowId))
+	Log("Column: "& B4XTable1.GetColumn(ColumnId))
+	
 	BCName = B4XTable1.GetRow(RowId).Get("بانک عامل")
 	UName = B4XTable1.GetRow(RowId).Get("نام")&" "&B4XTable1.GetRow(RowId).Get("نام خانوادگی")
 	UName = UName.Replace(" null", "")
