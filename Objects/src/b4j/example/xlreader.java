@@ -32,8 +32,8 @@ public boolean _fetchhyperlinks = false;
 public b4j.example.dateutils _dateutils = null;
 public b4j.example.cssutils _cssutils = null;
 public b4j.example.main _main = null;
-public b4j.example.b4xcollections _b4xcollections = null;
 public b4j.example.xuiviewsutils _xuiviewsutils = null;
+public b4j.example.b4xcollections _b4xcollections = null;
 public Object  _celltoobject(anywheresoftware.b4j.objects.PoiCellWrapper _cell,b4j.example.xlreaderresult _result) throws Exception{
 anywheresoftware.b4j.object.JavaObject _jcell = null;
 anywheresoftware.b4j.object.JavaObject _hyperlink = null;
@@ -158,7 +158,7 @@ case 5:
 this.state = 6;
 this.catchState = 0;
  //BA.debugLineNum = 38;BA.debugLine="Log(LastException)";
-parent.__c.LogImpl("97929861",BA.ObjectToString(parent.__c.LastException(ba)),0);
+parent.__c.LogImpl("934078725",BA.ObjectToString(parent.__c.LastException(ba)),0);
  if (true) break;
 if (true) break;
 

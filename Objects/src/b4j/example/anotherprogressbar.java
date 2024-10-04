@@ -45,8 +45,8 @@ public int _brushoffsetdelta = 0;
 public b4j.example.dateutils _dateutils = null;
 public b4j.example.cssutils _cssutils = null;
 public b4j.example.main _main = null;
-public b4j.example.b4xcollections _b4xcollections = null;
 public b4j.example.xuiviewsutils _xuiviewsutils = null;
+public b4j.example.b4xcollections _b4xcollections = null;
 public String  _base_resize(double _width,double _height) throws Exception{
 anywheresoftware.b4a.objects.B4XViewWrapper _v = null;
  //BA.debugLineNum = 49;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";

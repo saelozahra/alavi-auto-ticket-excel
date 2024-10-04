@@ -28,8 +28,8 @@ public int _mlength = 0;
 public b4j.example.dateutils _dateutils = null;
 public b4j.example.cssutils _cssutils = null;
 public b4j.example.main _main = null;
-public b4j.example.b4xcollections _b4xcollections = null;
 public b4j.example.xuiviewsutils _xuiviewsutils = null;
+public b4j.example.b4xcollections _b4xcollections = null;
 public b4j.example.b4xbytesbuilder  _append(byte[] _data) throws Exception{
  //BA.debugLineNum = 24;BA.debugLine="Public Sub Append(Data() As Byte) As B4XBytesBuild";
  //BA.debugLineNum = 25;BA.debugLine="Return Append2(Data, 0, Data.Length)";
@@ -168,7 +168,7 @@ byte[] _afterindex = null;
 if (_index>=_mlength) { 
  //BA.debugLineNum = 45;BA.debugLine="If Index > mLength Then Log(\"Index too large\")";
 if (_index>_mlength) { 
-__c.LogImpl("91638402","Index too large",0);};
+__c.LogImpl("927787266","Index too large",0);};
  //BA.debugLineNum = 46;BA.debugLine="Append(Data)";
 _append(_data);
  }else {
@@ -210,7 +210,7 @@ public String  _set(int _index,byte[] _data) throws Exception{
 if (_index>=_mlength) { 
  //BA.debugLineNum = 58;BA.debugLine="If Index > mLength Then Log(\"Index too large\")";
 if (_index>_mlength) { 
-__c.LogImpl("91703938","Index too large",0);};
+__c.LogImpl("927852802","Index too large",0);};
  //BA.debugLineNum = 59;BA.debugLine="Append(Data)";
 _append(_data);
  }else {

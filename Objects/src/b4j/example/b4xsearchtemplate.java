@@ -43,8 +43,8 @@ public boolean _prefixonly = false;
 public b4j.example.dateutils _dateutils = null;
 public b4j.example.cssutils _cssutils = null;
 public b4j.example.main _main = null;
-public b4j.example.b4xcollections _b4xcollections = null;
 public b4j.example.xuiviewsutils _xuiviewsutils = null;
+public b4j.example.b4xcollections _b4xcollections = null;
 public String  _additemstolist(anywheresoftware.b4a.objects.collections.List _li,String _full) throws Exception{
 b4j.example.b4jtextflow _tf = null;
 int _i = 0;
@@ -390,7 +390,7 @@ _count = (int) (_count+1);
  }
 };
  //BA.debugLineNum = 227;BA.debugLine="Log(\"Index time: \" & (DateTime.Now - startTime) &";
-__c.LogImpl("937683231","Index time: "+BA.NumberToString((__c.DateTime.getNow()-_starttime))+" ms ("+BA.NumberToString(_items.getSize())+" Items)",0);
+__c.LogImpl("920709407","Index time: "+BA.NumberToString((__c.DateTime.getNow()-_starttime))+" ms ("+BA.NumberToString(_items.getSize())+" Items)",0);
  //BA.debugLineNum = 228;BA.debugLine="AllItems = Items";
 _allitems = _items;
  //BA.debugLineNum = 229;BA.debugLine="Return Array(prefixList, substringList, AllItems)";

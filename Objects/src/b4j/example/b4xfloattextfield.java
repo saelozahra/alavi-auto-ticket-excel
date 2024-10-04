@@ -58,8 +58,8 @@ public long _lastswitchtextfieldtime = 0L;
 public b4j.example.dateutils _dateutils = null;
 public b4j.example.cssutils _cssutils = null;
 public b4j.example.main _main = null;
-public b4j.example.b4xcollections _b4xcollections = null;
 public b4j.example.xuiviewsutils _xuiviewsutils = null;
+public b4j.example.b4xcollections _b4xcollections = null;
 public String  _base_resize(double _width,double _height) throws Exception{
 int _firstdistance = 0;
  //BA.debugLineNum = 196;BA.debugLine="Public Sub Base_Resize (Width As Double, Height As";
@@ -346,7 +346,7 @@ if (_passwordmode && _multiline) {
  //BA.debugLineNum = 90;BA.debugLine="Multiline = False";
 _multiline = __c.False;
  //BA.debugLineNum = 91;BA.debugLine="Log(\"Multiline not supported with password mode.";
-__c.LogImpl("929163544","Multiline not supported with password mode.",0);
+__c.LogImpl("912189720","Multiline not supported with password mode.",0);
  };
  //BA.debugLineNum = 93;BA.debugLine="CreateTextFieldAll(PasswordMode, PassedLabel.Font";
 _createtextfieldall(_passwordmode,_passedlabel.getFont(),_xui.PaintOrColorToColor((Object)(_lbl.getTextColor())));

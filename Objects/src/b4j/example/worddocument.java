@@ -39,8 +39,8 @@ public anywheresoftware.b4j.object.JavaObject _jme = null;
 public b4j.example.dateutils _dateutils = null;
 public b4j.example.cssutils _cssutils = null;
 public b4j.example.main _main = null;
-public b4j.example.b4xcollections _b4xcollections = null;
 public b4j.example.xuiviewsutils _xuiviewsutils = null;
+public b4j.example.b4xcollections _b4xcollections = null;
 public static class _wordtagnode{
 public boolean IsInitialized;
 public String Tag;
@@ -255,7 +255,7 @@ _child = (b4j.example.worddocument._worddocelement)(_parent.Children /*anywheres
  //BA.debugLineNum = 68;BA.debugLine="If DebugLog Then";
 if (_debuglog) { 
  //BA.debugLineNum = 69;BA.debugLine="Log(\"Tag: \" & child.Tag)";
-__c.LogImpl("95701636","Tag: "+_child.Tag /*String*/ ,0);
+__c.LogImpl("931850500","Tag: "+_child.Tag /*String*/ ,0);
  };
  //BA.debugLineNum = 71;BA.debugLine="Select child.Tag";
 switch (BA.switchObjectToInt(_child.Tag /*String*/ ,"p","header","footer","table","row","cell")) {
@@ -821,7 +821,7 @@ if (true) return _f;
  } 
        catch (Exception e18) {
 			ba.setLastException(e18); //BA.debugLineNum = 180;BA.debugLine="Log(\"Failed: \" & f)";
-__c.LogImpl("95898258","Failed: "+_f,0);
+__c.LogImpl("932047122","Failed: "+_f,0);
  };
  }
 };

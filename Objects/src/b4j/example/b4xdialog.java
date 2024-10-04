@@ -55,8 +55,8 @@ public anywheresoftware.b4a.objects.collections.Map _buttonsstate = null;
 public b4j.example.dateutils _dateutils = null;
 public b4j.example.cssutils _cssutils = null;
 public b4j.example.main _main = null;
-public b4j.example.b4xcollections _b4xcollections = null;
 public b4j.example.xuiviewsutils _xuiviewsutils = null;
+public b4j.example.b4xcollections _b4xcollections = null;
 public String  _background_click() throws Exception{
  //BA.debugLineNum = 255;BA.debugLine="Private Sub Background_Click";
  //BA.debugLineNum = 257;BA.debugLine="End Sub";
@@ -192,7 +192,7 @@ _setavg(_bc,_x,_y,_clrs,_temp);
  }
 };
  //BA.debugLineNum = 320;BA.debugLine="Log(\"Time: \" & (DateTime.Now - n))";
-__c.LogImpl("928704804","Time: "+BA.NumberToString((__c.DateTime.getNow()-_n)),0);
+__c.LogImpl("911730980","Time: "+BA.NumberToString((__c.DateTime.getNow()-_n)),0);
  //BA.debugLineNum = 321;BA.debugLine="Return bc";
 if (true) return _bc;
  //BA.debugLineNum = 322;BA.debugLine="End Sub";

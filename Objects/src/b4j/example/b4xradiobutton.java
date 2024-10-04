@@ -46,8 +46,8 @@ public float _scale = 0f;
 public b4j.example.dateutils _dateutils = null;
 public b4j.example.cssutils _cssutils = null;
 public b4j.example.main _main = null;
-public b4j.example.b4xcollections _b4xcollections = null;
 public b4j.example.xuiviewsutils _xuiviewsutils = null;
+public b4j.example.b4xcollections _b4xcollections = null;
 public String  _base_resize(double _width1,double _height1) throws Exception{
 int _newsize = 0;
 int _gap = 0;

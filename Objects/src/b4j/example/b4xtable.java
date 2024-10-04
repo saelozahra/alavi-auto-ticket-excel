@@ -93,8 +93,8 @@ public boolean _searchvisible = false;
 public b4j.example.dateutils _dateutils = null;
 public b4j.example.cssutils _cssutils = null;
 public b4j.example.main _main = null;
-public b4j.example.b4xcollections _b4xcollections = null;
 public b4j.example.xuiviewsutils _xuiviewsutils = null;
+public b4j.example.b4xcollections _b4xcollections = null;
 public static class _b4xtablecolumn{
 public boolean IsInitialized;
 public String Title;
@@ -1004,7 +1004,7 @@ case 18:
 //C
 this.state = 19;
  //BA.debugLineNum = 166;BA.debugLine="Log(\"closing old db.\")";
-parent.__c.LogImpl("918087956","closing old db.",0);
+parent.__c.LogImpl("91114132","closing old db.",0);
  //BA.debugLineNum = 167;BA.debugLine="OldSQL.Close";
 _oldsql.Close();
  if (true) break;
@@ -1910,7 +1910,7 @@ case 60:
 //C
 this.state = 61;
  //BA.debugLineNum = 484;BA.debugLine="Log(LastException)";
-parent.__c.LogImpl("919071046",BA.ObjectToString(parent.__c.LastException(ba)),0);
+parent.__c.LogImpl("92097222",BA.ObjectToString(parent.__c.LastException(ba)),0);
  if (true) break;
 ;
  //BA.debugLineNum = 486;BA.debugLine="If xui.SubExists(mCallBack, mEventName & \"_DataUp";

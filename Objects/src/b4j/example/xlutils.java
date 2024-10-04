@@ -78,8 +78,8 @@ public boolean _blankworkbookis2007 = false;
 public b4j.example.dateutils _dateutils = null;
 public b4j.example.cssutils _cssutils = null;
 public b4j.example.main _main = null;
-public b4j.example.b4xcollections _b4xcollections = null;
 public b4j.example.xuiviewsutils _xuiviewsutils = null;
+public b4j.example.b4xcollections _b4xcollections = null;
 public static class _xladdress{
 public boolean IsInitialized;
 public int Col0Based;
@@ -520,7 +520,7 @@ _res.Add((Object)(_formulatorange(_poiworkbook,_formula,_namename)));
  } 
        catch (Exception e11) {
 			ba.setLastException(e11); //BA.debugLineNum = 171;BA.debugLine="Log($\"info: cannot get range of: ${NameName} -";
-__c.LogImpl("915728651",("info: cannot get range of: "+__c.SmartStringFormatter("",(Object)(_namename))+" - "+__c.SmartStringFormatter("",(Object)(_formula))+" "),0);
+__c.LogImpl("941877515",("info: cannot get range of: "+__c.SmartStringFormatter("",(Object)(_namename))+" - "+__c.SmartStringFormatter("",(Object)(_formula))+" "),0);
  };
  }
 };
@@ -598,9 +598,9 @@ case 3:
 //C
 this.state = 4;
  //BA.debugLineNum = 263;BA.debugLine="Log(StdOut)";
-parent.__c.LogImpl("916318471",_stdout,0);
+parent.__c.LogImpl("942467335",_stdout,0);
  //BA.debugLineNum = 264;BA.debugLine="Log(StdErr)";
-parent.__c.LogImpl("916318472",_stderr,0);
+parent.__c.LogImpl("942467336",_stderr,0);
  //BA.debugLineNum = 265;BA.debugLine="Return False";
 if (true) {
 parent.__c.ReturnFromResumableSub(this,(Object)(parent.__c.False));return;};
@@ -671,7 +671,7 @@ case 3:
 //C
 this.state = 4;
  //BA.debugLineNum = 276;BA.debugLine="Log(\"Cannot delete output file\")";
-parent.__c.LogImpl("916384003","Cannot delete output file",0);
+parent.__c.LogImpl("942532867","Cannot delete output file",0);
  //BA.debugLineNum = 277;BA.debugLine="Return False";
 if (true) {
 parent.__c.ReturnFromResumableSub(this,(Object)(parent.__c.False));return;};
@@ -862,7 +862,7 @@ case 3:
 //C
 this.state = 4;
  //BA.debugLineNum = 312;BA.debugLine="Log(StdErr)";
-parent.__c.LogImpl("916449548",_stderr,0);
+parent.__c.LogImpl("942598412",_stderr,0);
  //BA.debugLineNum = 313;BA.debugLine="If ExitCode = 0 Then res.ExitCode = 1";
 if (true) break;
 

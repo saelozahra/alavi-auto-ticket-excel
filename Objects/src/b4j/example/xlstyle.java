@@ -48,8 +48,8 @@ public b4j.example.xlworkbookwriter _writer = null;
 public b4j.example.dateutils _dateutils = null;
 public b4j.example.cssutils _cssutils = null;
 public b4j.example.main _main = null;
-public b4j.example.b4xcollections _b4xcollections = null;
 public b4j.example.xuiviewsutils _xuiviewsutils = null;
+public b4j.example.b4xcollections _b4xcollections = null;
 public b4j.example.xlstyle  _borderbottom(String _borderstyle) throws Exception{
  //BA.debugLineNum = 105;BA.debugLine="Public Sub BorderBottom (BorderStyle As String) As";
  //BA.debugLineNum = 106;BA.debugLine="Return SetBorder(STYLE_KEY_BORDER_BOTTOM, BorderS";

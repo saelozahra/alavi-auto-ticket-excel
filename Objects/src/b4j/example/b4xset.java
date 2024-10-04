@@ -27,8 +27,8 @@ public b4j.example.b4xorderedmap _map = null;
 public b4j.example.dateutils _dateutils = null;
 public b4j.example.cssutils _cssutils = null;
 public b4j.example.main _main = null;
-public b4j.example.b4xcollections _b4xcollections = null;
 public b4j.example.xuiviewsutils _xuiviewsutils = null;
+public b4j.example.b4xcollections _b4xcollections = null;
 public String  _add(Object _value) throws Exception{
  //BA.debugLineNum = 9;BA.debugLine="Public Sub Add(Value As Object)";
  //BA.debugLineNum = 10;BA.debugLine="map.Put(Value, \"\")";

@@ -44,8 +44,8 @@ public boolean _mhaptic = false;
 public b4j.example.dateutils _dateutils = null;
 public b4j.example.cssutils _cssutils = null;
 public b4j.example.main _main = null;
-public b4j.example.b4xcollections _b4xcollections = null;
 public b4j.example.xuiviewsutils _xuiviewsutils = null;
+public b4j.example.b4xcollections _b4xcollections = null;
 public String  _base_resize(double _width1,double _height1) throws Exception{
  //BA.debugLineNum = 148;BA.debugLine="Private Sub Base_Resize (Width1 As Double, Height1";
  //BA.debugLineNum = 150;BA.debugLine="End Sub";

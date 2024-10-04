@@ -43,8 +43,8 @@ public Object[] _initialcolor = null;
 public b4j.example.dateutils _dateutils = null;
 public b4j.example.cssutils _cssutils = null;
 public b4j.example.main _main = null;
-public b4j.example.b4xcollections _b4xcollections = null;
 public b4j.example.xuiviewsutils _xuiviewsutils = null;
+public b4j.example.b4xcollections _b4xcollections = null;
 public static class _colorpickerpart{
 public boolean IsInitialized;
 public anywheresoftware.b4a.objects.B4XCanvas cvs;

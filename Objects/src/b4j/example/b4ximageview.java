@@ -37,8 +37,8 @@ public int _mcornersradius = 0;
 public b4j.example.dateutils _dateutils = null;
 public b4j.example.cssutils _cssutils = null;
 public b4j.example.main _main = null;
-public b4j.example.b4xcollections _b4xcollections = null;
 public b4j.example.xuiviewsutils _xuiviewsutils = null;
+public b4j.example.b4xcollections _b4xcollections = null;
 public String  _base_resize(double _width,double _height) throws Exception{
  //BA.debugLineNum = 40;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
  //BA.debugLineNum = 41;BA.debugLine="Update";
@@ -261,7 +261,7 @@ _imageviewheight = (float) (_mbitmap.getHeight());
  break; }
 default: {
  //BA.debugLineNum = 104;BA.debugLine="Log(\"Invalid resize mode: \"  & mResizeMode)";
-__c.LogImpl("931719451","Invalid resize mode: "+_mresizemode,0);
+__c.LogImpl("914745627","Invalid resize mode: "+_mresizemode,0);
  break; }
 }
 ;

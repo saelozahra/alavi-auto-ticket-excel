@@ -1,30 +1,37 @@
 ﻿AppType=JavaFX
 Build1=Default,b4j.example
 File1=Layout1.bjl
-File2=Sahel.ttf
-File3=Shabnam.ttf
-File4=theme.png
-File5=view_ticket_layout.bjl
+File2=Ray-Black.ttf
+File3=Ray-ExtraBold.ttf
+File4=Sahel.ttf
+File5=Shabnam.ttf
+File6=theme old.png
+File7=theme.png
+File8=view_ticket_layout.bjl
 FileGroup1=Default Group
 FileGroup2=Default Group
 FileGroup3=Default Group
 FileGroup4=Default Group
 FileGroup5=Default Group
+FileGroup6=Default Group
+FileGroup7=Default Group
+FileGroup8=Default Group
 Group=Default Group
-Library1=jcore
-Library2=jfx
-Library3=jxui
-Library4=xlutils
-Library5=b4xtable
+Library1=b4xtable
+Library2=jcore
+Library3=jfx
+Library4=jxui
+Library5=xlutils
+Library6=jdateutils
 Module1=view_ui
-NumberOfFiles=5
-NumberOfLibraries=5
+NumberOfFiles=8
+NumberOfLibraries=6
 NumberOfModules=1
 Version=9.8
 @EndOfDesignText@
 #Region Project Attributes 
 	#MainFormWidth: 888
-	#MainFormHeight: 888 
+	#MainFormHeight: 720 
 #End Region
 
 Sub Process_Globals
@@ -36,7 +43,7 @@ Sub Process_Globals
 	
 	Public BCName As String
 	Public UName As String
-	Public FatherName As String
+	Public Gardesh As String
 	Public MelliCode As String
 	Public MablaghRil As String
 	
@@ -97,12 +104,12 @@ Private Sub B4XTable1_CellClicked (ColumnId As String, RowId As Long)
 	Log("Row: "& B4XTable1.GetRow(RowId))
 	Log("Column: "& B4XTable1.GetColumn(ColumnId))
 	
-	BCName = B4XTable1.GetRow(RowId).Get("بانک عامل")
-	UName = B4XTable1.GetRow(RowId).Get("نام")&" "&B4XTable1.GetRow(RowId).Get("نام خانوادگی")
+	BCName = B4XTable1.GetRow(RowId).Get("شعبه بانک")
+	UName = B4XTable1.GetRow(RowId).Get("نام خانوادگی")
 	UName = UName.Replace(" null", "")
-	FatherName = B4XTable1.GetRow(RowId).Get("نام پدر")
+	Gardesh = B4XTable1.GetRow(RowId).Get("گردش")
 	MelliCode = B4XTable1.GetRow(RowId).Get("کد ملی")
-	MablaghRil = B4XTable1.GetRow(RowId).Get("مبلغ تسهیلات(ریال)").As(String).Replace("E9", "00,000,000").Replace("E8", "0,000,000")
+	MablaghRil = B4XTable1.GetRow(RowId).Get("مبلغ").As(String).Replace("E9", "00,000,000").Replace("E8", "0,000,000")
 	Try
 		Dim vu As view_ui
 		vu.Initialize(MainForm)
@@ -130,25 +137,25 @@ Private Sub LoadSheet(Index As Int)
 '	Dim result As XLReaderResult = XL.Reader.ReadSheetByName(File.DirAssets, "Countries of the world.xlsx", "Sheet1") 'complete sheet
 	result.LogResult(True)
 
-	B4XTable1.AddColumn(result.Get(XL.AddressName("A1")), B4XTable1.COLUMN_TYPE_TEXT)
+	B4XTable1.HeaderFont=fx.LoadFont(File.DirAssets, "Ray-Black.ttf", 15dip)
 	B4XTable1.AddColumn(result.Get(XL.AddressName("B1")), B4XTable1.COLUMN_TYPE_TEXT)
+	B4XTable1.AddColumn(result.Get(XL.AddressName("C1")), B4XTable1.COLUMN_TYPE_TEXT)
 '		B4XTable1.AddColumn(result.Get(XL.AddressName("C1")), B4XTable1.COLUMN_TYPE_TEXT)
-	B4XTable1.AddColumn(result.Get(XL.AddressName("D1")), B4XTable1.COLUMN_TYPE_TEXT)
+	B4XTable1.AddColumn(result.Get(XL.AddressName("AN1")), B4XTable1.COLUMN_TYPE_TEXT)
 	B4XTable1.AddColumn(result.Get(XL.AddressName("E1")), B4XTable1.COLUMN_TYPE_TEXT)
-	B4XTable1.AddColumn(result.Get(XL.AddressName("G1")), B4XTable1.COLUMN_TYPE_NUMBERS)
-	B4XTable1.AddColumn(result.Get(XL.AddressName("H1")), B4XTable1.COLUMN_TYPE_TEXT)
-
+	B4XTable1.AddColumn("مبلغ", B4XTable1.COLUMN_TYPE_TEXT)
+	B4XTable1.AddColumn(result.Get(XL.AddressName("Z1")), B4XTable1.COLUMN_TYPE_TEXT)
 	Dim TableData As List
 	TableData.Initialize
 	For Row1Based = 6 To result.BottomRight.Row0Based + 1
-		Dim City As String = result.Get(XL.AddressOne("A", Row1Based))
-		Dim NameFamily As String = result.Get(XL.AddressOne("B", Row1Based))&" "&result.Get(XL.AddressOne("C", Row1Based))
-		Dim Father As String = result.Get(XL.AddressOne("D", Row1Based))
+		Dim City As String = result.Get(XL.AddressOne("B", Row1Based))
+		Dim NameFamily As String = result.Get(XL.AddressOne("D", Row1Based))&" "&result.Get(XL.AddressOne("B", Row1Based))&" "&result.Get(XL.AddressOne("C", Row1Based))
+		Dim Father As String = result.Get(XL.AddressOne("AN", Row1Based))
 		Dim Melli As String = result.Get(XL.AddressOne("E", Row1Based))
 '		If Melli = "" Then Continue
 		Melli = Melli.Replace(".", "").Replace("E9", "")
-		Dim Mablagh As String = result.Get(XL.AddressOne("G", Row1Based))
-		Dim Bank As String = result.Get(XL.AddressOne("H", Row1Based))&" شعبه "&result.Get(XL.AddressOne("I", Row1Based))
+		Dim Mablagh As String = result.Get(XL.AddressOne("F", Row1Based))
+		Dim Bank As String = result.Get(XL.AddressOne("Y", Row1Based))&" شعبه "&result.Get(XL.AddressOne("Z", Row1Based))
 		TableData.Add(Array(City, NameFamily, Father, Melli, Mablagh, Bank))
 	Next
 	B4XTable1.SetData(TableData)

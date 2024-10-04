@@ -44,8 +44,8 @@ public String _internalnameregex = "";
 public b4j.example.dateutils _dateutils = null;
 public b4j.example.cssutils _cssutils = null;
 public b4j.example.main _main = null;
-public b4j.example.b4xcollections _b4xcollections = null;
 public b4j.example.xuiviewsutils _xuiviewsutils = null;
+public b4j.example.b4xcollections _b4xcollections = null;
 public anywheresoftware.b4j.object.JavaObject  _addnamedrange(String _name,b4j.example.xlutils._xlrange _range) throws Exception{
 anywheresoftware.b4j.object.JavaObject _cellrangeaddress = null;
 anywheresoftware.b4j.object.JavaObject _jname = null;
@@ -416,7 +416,7 @@ if (true) return _f;
  } 
        catch (Exception e16) {
 			ba.setLastException(e16); //BA.debugLineNum = 68;BA.debugLine="Log(\"Failed: \" & f)";
-__c.LogImpl("916711696","Failed: "+_f,0);
+__c.LogImpl("942860560","Failed: "+_f,0);
  };
  }
 };

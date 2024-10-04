@@ -27,8 +27,8 @@ public b4j.example.xlutils _xl = null;
 public b4j.example.dateutils _dateutils = null;
 public b4j.example.cssutils _cssutils = null;
 public b4j.example.main _main = null;
-public b4j.example.b4xcollections _b4xcollections = null;
 public b4j.example.xuiviewsutils _xuiviewsutils = null;
+public b4j.example.b4xcollections _b4xcollections = null;
 public String  _class_globals() throws Exception{
  //BA.debugLineNum = 1;BA.debugLine="Sub Class_Globals";
  //BA.debugLineNum = 2;BA.debugLine="Public xl As XLUtils";
@@ -153,7 +153,7 @@ case 3:
 //C
 this.state = 4;
  //BA.debugLineNum = 31;BA.debugLine="Log(\"Cannot delete output file\")";
-parent.__c.LogImpl("97340035","Cannot delete output file",0);
+parent.__c.LogImpl("933488899","Cannot delete output file",0);
  //BA.debugLineNum = 32;BA.debugLine="Return False";
 if (true) {
 parent.__c.ReturnFromResumableSub(this,(Object)(parent.__c.False));return;};
