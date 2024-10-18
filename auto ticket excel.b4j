@@ -43,6 +43,7 @@ Sub Process_Globals
 	Private B4XTable1 As B4XTable
 	Private XL As XLUtils
 	
+	Public OperationType As String
 	Public BCName As String
 	Public UName As String
 	Public Gardesh As String
@@ -117,9 +118,18 @@ Private Sub B4XTable1_CellClicked (ColumnId As String, RowId As Long)
 	MablaghRil = B4XTable1.GetRow(RowId).Get("مبلغ").As(String).Replace("E9", "00,000,000").Replace("E8", "0,000,000")
 	Try
 		
+		OperationType = "moarefi"
+		Dim sf As Object = xui.Msgbox2Async("میخوای نامه معرفی بزنی یا آزادسازی مرحله دوم؟", "چه نامه‌ای میخوای؟", "آزادسازی مرحله دوم", "لغو", "معرفی", Null)
+		Wait For (sf) Msgbox_Result (Result As Int)
+		If Result = xui.DialogResponse_Positive Then
+			Log("Deleted!!!")
+			OperationType = "azad"
+		End If
+		
 		Dim vu As view_ui
 		vu.Initialize(MainForm)
 		vu.Show
+		
 '	lblName.Text = vu.Show
 	Catch
 		Log(LastException)

@@ -26,12 +26,23 @@ Public Sub Initialize (Parent As Form)
 	frm.RootPane.Style =  "-fx-background-image: url('" & File.GetUri(File.DirAssets, "theme.png") & "'); -fx-background-repeat: no-repeat; -fx-background-size: contain; -fx-background-position: center center;"
 	Dim Shabnam As Font = fx.LoadFont(File.DirAssets, "Ray-Black.ttf", 15dip)
 	
-	Dim BNameImg As Image = WrapDrawnText(frm.RootPane, "محضر مدیریت محترم بانک "&Main.BCName&CRLF&"موضوع: معرفی "&Main.UName&" جهت اخذ تسهیلات", fx.Colors.DarkGray, Shabnam, "TOP_RIGHT", 355dip, "20px")
+	
+	Dim ticket_subject, ticket_text2 As String
+	
+	If Main.OperationType == "azad" Then
+		ticket_subject = "آزادســـــــــــــازی تسهیــــــــــــــــــــالت اشتغال‌زایی"
+		ticket_text2 = " با توجه به بازدید صورت‌گرفته مورد تائید بوده و اقدامات لازم جهت آزادسازی باقیمانده مبلغ وام اشتغال‌زایی  "&Main.Gardesh&" بانک "&Main.BCName&CRLF&"  به مبلغ  "& Main.MablaghRil.Replace(".", "،")&" ریال، را مبذول فرمائید "
+	Else
+		ticket_subject = "معرفی "&Main.UName&" جهت اخذ تسهیلات"
+		ticket_text2 = " جهت استفاده از تسهیلات اشتغال‌زایی از محل "&Main.Gardesh&" بانک "&Main.BCName&CRLF&"  به مبلغ  "& Main.MablaghRil.Replace(".", "،")&" ریال، خدمتتان معرفی میگردد "
+	End If
+	
+	Dim BNameImg As Image = WrapDrawnText(frm.RootPane, "محضر مدیریت محترم بانک "&Main.BCName&CRLF&"موضوع: "&ticket_subject, fx.Colors.DarkGray, Shabnam, "TOP_RIGHT", 355dip, "20px")
 	poCan.DrawImage(BNameImg, 30dip, 150dip, BNameImg.Width, BNameImg.Height)
 	
 	Dim ShabnamAdi As Font = fx.LoadFont(File.DirAssets, "Ray-ExtraBold.ttf", 15dip)
 	
-	Dim ticket_text As String = "احتراما   "&Main.UName&"  با شناسه ملی: "&Main.MelliCode & " جهت استفاده از تسهیلات اشتغال‌زایی از محل "&Main.Gardesh&" بانک "&Main.BCName&CRLF&"  به مبلغ  "& Main.MablaghRil.Replace(".", "،")&" ریال، خدمتتان معرفی میگردد "& CRLF & "پیشاپیش از مساعدت جناب عالی متشکریم"
+	Dim ticket_text As String = "احتراما   "&Main.UName&"  با شناسه ملی: "&Main.MelliCode & ticket_text2 & CRLF & "پیشاپیش از مساعدت جناب عالی متشکریم"
 	Dim UserNameImg As Image = WrapDrawnText(frm.RootPane, ticket_text, fx.Colors.DarkGray, ShabnamAdi, "TOP_RIGHT", 355dip, "30px")
 	poCan.DrawImage(UserNameImg, 30dip, 280dip, UserNameImg.Width, UserNameImg.Height)
 	
