@@ -300,7 +300,7 @@ b4j.example.xltable _t = null;
  //BA.debugLineNum = 249;BA.debugLine="If Workbook.IsXLSX = False Then";
 if (_workbook._isxlsx /*boolean*/ ==__c.False) { 
  //BA.debugLineNum = 250;BA.debugLine="Log(\"Tables are supported in XLSX only.\")";
-__c.LogImpl("937355522","Tables are supported in XLSX only.",0);
+__c.LogImpl("937421058","Tables are supported in XLSX only.",0);
  //BA.debugLineNum = 251;BA.debugLine="Return Null";
 if (true) return (b4j.example.xltable)(__c.Null);
  };

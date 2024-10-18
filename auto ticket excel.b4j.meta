@@ -4,6 +4,6 @@ ModuleBreakpoints0=
 ModuleBreakpoints1=
 ModuleClosedNodes0=
 ModuleClosedNodes1=
-NavigationStack=Main,fileaddress_TextChanged,59,6,view_ui,Show,68,0,view_ui,poCan_MousePressed,120,0,view_ui,WrapDrawnText,84,6,Main,AppStart,26,6,Main,Process_Globals,14,0,Main,LoadSheet,114,6,Main,B4XTable1_CellClicked,79,6,view_ui,Initialize,27,6,view_ui,Class_Globals,7,0
+NavigationStack=view_ui,WrapDrawnText,84,6,view_ui,Class_Globals,5,0,Visual Designer,Layout1.bjl,-100,6,Main,select_file_btn_Click,38,1,view_ui,Initialize,27,6,Main,LoadSheet,129,6,Main,fileaddress_TextChanged,68,5,Main,Process_Globals,13,0,Main,AppStart,24,6,Main,B4XTable1_CellClicked,85,6
 SelectedBuild=0
 VisibleModules=1

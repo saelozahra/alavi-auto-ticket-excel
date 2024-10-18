@@ -86,7 +86,7 @@ _pocan.DrawImage((javafx.scene.image.Image)(_bnameimg.getObject()),__c.DipToCurr
 _shabnamadi = new anywheresoftware.b4j.objects.JFX.FontWrapper();
 _shabnamadi = _fx.LoadFont(__c.File.getDirAssets(),"Ray-ExtraBold.ttf",__c.DipToCurrent((int) (15)));
  //BA.debugLineNum = 28;BA.debugLine="Dim ticket_text As String = \"احتراما   \"&Main.UNa";
-_ticket_text = "احتراما   "+_main._uname /*String*/ +"  با شناسه ملی: "+_main._mellicode /*String*/ +" جهت استفاده از تسهیلات اشتغال‌زایی از محل "+_main._gardesh /*String*/ +" بانک "+_main._bcname /*String*/ +" به مبلغ "+_main._mablaghril /*String*/ +" ریال، خدمتتان معرفی میگردد "+__c.CRLF+"پیشاپیش از مساعدت جناب عالی متشکریم";
+_ticket_text = "احتراما   "+_main._uname /*String*/ +"  با شناسه ملی: "+_main._mellicode /*String*/ +" جهت استفاده از تسهیلات اشتغال‌زایی از محل "+_main._gardesh /*String*/ +" بانک "+_main._bcname /*String*/ +__c.CRLF+"  به مبلغ  "+_main._mablaghril /*String*/ .replace(".","،")+" ریال، خدمتتان معرفی میگردد "+__c.CRLF+"پیشاپیش از مساعدت جناب عالی متشکریم";
  //BA.debugLineNum = 29;BA.debugLine="Dim UserNameImg As Image = WrapDrawnText(frm.Root";
 _usernameimg = new anywheresoftware.b4j.objects.ImageViewWrapper.ImageWrapper();
 _usernameimg = _wrapdrawntext(_frm.getRootPane(),_ticket_text,(anywheresoftware.b4j.objects.JFX.PaintWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.objects.JFX.PaintWrapper(), (javafx.scene.paint.Paint)(_fx.Colors.DarkGray)),_shabnamadi,"TOP_RIGHT",__c.DipToCurrent((int) (355)),"30px");

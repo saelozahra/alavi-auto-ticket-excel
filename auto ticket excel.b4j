@@ -1,13 +1,14 @@
 ﻿AppType=JavaFX
 Build1=Default,b4j.example
-File1=Layout1.bjl
-File2=Ray-Black.ttf
-File3=Ray-ExtraBold.ttf
-File4=Sahel.ttf
-File5=Shabnam.ttf
-File6=theme old.png
-File7=theme.png
-File8=view_ticket_layout.bjl
+File1=bg.jpg
+File2=Layout1.bjl
+File3=Ray-Black.ttf
+File4=Ray-ExtraBold.ttf
+File5=Sahel.ttf
+File6=Shabnam.ttf
+File7=theme old.png
+File8=theme.png
+File9=view_ticket_layout.bjl
 FileGroup1=Default Group
 FileGroup2=Default Group
 FileGroup3=Default Group
@@ -16,6 +17,7 @@ FileGroup5=Default Group
 FileGroup6=Default Group
 FileGroup7=Default Group
 FileGroup8=Default Group
+FileGroup9=Default Group
 Group=Default Group
 Library1=b4xtable
 Library2=jcore
@@ -24,14 +26,14 @@ Library4=jxui
 Library5=xlutils
 Library6=jdateutils
 Module1=view_ui
-NumberOfFiles=8
+NumberOfFiles=9
 NumberOfLibraries=6
 NumberOfModules=1
-Version=9.8
+Version=10
 @EndOfDesignText@
 #Region Project Attributes 
-	#MainFormWidth: 888
-	#MainFormHeight: 720 
+	#MainFormWidth: 720
+	#MainFormHeight: 520 
 #End Region
 
 Sub Process_Globals
@@ -68,6 +70,7 @@ End Sub
 
 
 Private Sub select_file_btn_Click
+	
 	Dim fc As FileChooser
 	fc.Initialize
 	fc.SetExtensionFilter("یک فایل اکسل انتخاب کنید",Array As String("*.xls","*.xlsx","*.csv","*.xml"))
@@ -86,31 +89,34 @@ Private Sub select_file_btn_Click
 End Sub
 
 Private Sub fileaddress_TextChanged (Old As String, New As String)
-	
-	File.WriteString(File.DirApp, "excelurl", New)
-	
-	If Not(File.Exists("", New)) Then
-		fileaddress.Text = ""
-	End If
-	
-	If New.Length>10 Then
-		File.Copy("", New, File.DirApp, "excel.xlsx")
-		LoadSheet(0)
-	End If
-	
+	Try
+		File.WriteString(File.DirApp, "excelurl", New)
+		
+		If Not(File.Exists("", New)) Then
+			fileaddress.Text = ""
+		End If
+		
+		If New.Length>10 Then
+			File.Copy("", New, File.DirApp, "excel.xlsx")
+			LoadSheet(0)
+		End If
+	Catch
+		File.WriteString(File.DirApp, "excelurl", "")
+	End Try
 End Sub
 
 Private Sub B4XTable1_CellClicked (ColumnId As String, RowId As Long)
 	Log("Row: "& B4XTable1.GetRow(RowId))
 	Log("Column: "& B4XTable1.GetColumn(ColumnId))
 	
-	BCName = B4XTable1.GetRow(RowId).Get("شعبه بانک")
+	BCName = B4XTable1.GetRow(RowId).Get("بانک")
 	UName = B4XTable1.GetRow(RowId).Get("نام خانوادگی")
-	UName = UName.Replace(" null", "")
+	UName = UName.Replace(" null", "").Replace("آقا", "آقای")
 	Gardesh = B4XTable1.GetRow(RowId).Get("گردش")
 	MelliCode = B4XTable1.GetRow(RowId).Get("کد ملی")
 	MablaghRil = B4XTable1.GetRow(RowId).Get("مبلغ").As(String).Replace("E9", "00,000,000").Replace("E8", "0,000,000")
 	Try
+		
 		Dim vu As view_ui
 		vu.Initialize(MainForm)
 		vu.Show
@@ -145,18 +151,20 @@ Private Sub LoadSheet(Index As Int)
 	B4XTable1.AddColumn(result.Get(XL.AddressName("E1")), B4XTable1.COLUMN_TYPE_TEXT)
 	B4XTable1.AddColumn("مبلغ", B4XTable1.COLUMN_TYPE_TEXT)
 	B4XTable1.AddColumn(result.Get(XL.AddressName("Z1")), B4XTable1.COLUMN_TYPE_TEXT)
+	B4XTable1.AddColumn(result.Get(XL.AddressName("AO1")), B4XTable1.COLUMN_TYPE_TEXT)
 	Dim TableData As List
 	TableData.Initialize
-	For Row1Based = 6 To result.BottomRight.Row0Based + 1
+	For Row1Based = 7 To result.BottomRight.Row0Based + 1
 		Dim City As String = result.Get(XL.AddressOne("B", Row1Based))
 		Dim NameFamily As String = result.Get(XL.AddressOne("D", Row1Based))&" "&result.Get(XL.AddressOne("B", Row1Based))&" "&result.Get(XL.AddressOne("C", Row1Based))
 		Dim Father As String = result.Get(XL.AddressOne("AN", Row1Based))
 		Dim Melli As String = result.Get(XL.AddressOne("E", Row1Based))
 '		If Melli = "" Then Continue
 		Melli = Melli.Replace(".", "").Replace("E9", "")
-		Dim Mablagh As String = result.Get(XL.AddressOne("F", Row1Based))
-		Dim Bank As String = result.Get(XL.AddressOne("Y", Row1Based))&" شعبه "&result.Get(XL.AddressOne("Z", Row1Based))
-		TableData.Add(Array(City, NameFamily, Father, Melli, Mablagh, Bank))
+		Dim Mablagh As String = result.Get(XL.AddressOne("G", Row1Based))
+		Dim Bank As String = result.Get(XL.AddressOne("Z", Row1Based))&" شعبه "&result.Get(XL.AddressOne("AA", Row1Based))
+		Dim ThisGardesh As String = result.Get(XL.AddressOne("AO", Row1Based))
+		TableData.Add(Array(City, NameFamily, Father, Melli, Mablagh, Bank, ThisGardesh))
 	Next
 	B4XTable1.SetData(TableData)
 	

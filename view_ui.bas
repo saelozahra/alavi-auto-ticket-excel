@@ -31,7 +31,7 @@ Public Sub Initialize (Parent As Form)
 	
 	Dim ShabnamAdi As Font = fx.LoadFont(File.DirAssets, "Ray-ExtraBold.ttf", 15dip)
 	
-	Dim ticket_text As String = "احتراما   "&Main.UName&"  با شناسه ملی: "&Main.MelliCode & " جهت استفاده از تسهیلات اشتغال‌زایی از محل "&Main.Gardesh&" بانک "&Main.BCName&" به مبلغ "& Main.MablaghRil&" ریال، خدمتتان معرفی میگردد "& CRLF & "پیشاپیش از مساعدت جناب عالی متشکریم"
+	Dim ticket_text As String = "احتراما   "&Main.UName&"  با شناسه ملی: "&Main.MelliCode & " جهت استفاده از تسهیلات اشتغال‌زایی از محل "&Main.Gardesh&" بانک "&Main.BCName&CRLF&"  به مبلغ  "& Main.MablaghRil.Replace(".", "،")&" ریال، خدمتتان معرفی میگردد "& CRLF & "پیشاپیش از مساعدت جناب عالی متشکریم"
 	Dim UserNameImg As Image = WrapDrawnText(frm.RootPane, ticket_text, fx.Colors.DarkGray, ShabnamAdi, "TOP_RIGHT", 355dip, "30px")
 	poCan.DrawImage(UserNameImg, 30dip, 280dip, UserNameImg.Width, UserNameImg.Height)
 	

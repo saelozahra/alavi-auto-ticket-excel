@@ -144,9 +144,9 @@ boolean _firstcell = false;
 Object _cell = null;
  //BA.debugLineNum = 20;BA.debugLine="Public Sub LogResult (WithContent As Boolean)";
  //BA.debugLineNum = 21;BA.debugLine="Log($\"*** ${Name} ***\"$)";
-__c.LogImpl("934996225",("*** "+__c.SmartStringFormatter("",(Object)(_name))+" ***"),0);
+__c.LogImpl("935061761",("*** "+__c.SmartStringFormatter("",(Object)(_name))+" ***"),0);
  //BA.debugLineNum = 22;BA.debugLine="Log($\"Number of rows: ${Data.Size}\"$)";
-__c.LogImpl("934996226",("Number of rows: "+__c.SmartStringFormatter("",(Object)(_data.getSize()))+""),0);
+__c.LogImpl("935061762",("Number of rows: "+__c.SmartStringFormatter("",(Object)(_data.getSize()))+""),0);
  //BA.debugLineNum = 23;BA.debugLine="If Data.Size > 0 Then";
 if (_data.getSize()>0) { 
  //BA.debugLineNum = 24;BA.debugLine="Dim IsRectangle As Boolean = True";
@@ -175,13 +175,13 @@ if (true) break;
  }
 };
  //BA.debugLineNum = 34;BA.debugLine="Log($\"Is rectangle region: ${IsRectangle}\"$)";
-__c.LogImpl("934996238",("Is rectangle region: "+__c.SmartStringFormatter("",(Object)(_isrectangle))+""),0);
+__c.LogImpl("935061774",("Is rectangle region: "+__c.SmartStringFormatter("",(Object)(_isrectangle))+""),0);
  //BA.debugLineNum = 35;BA.debugLine="Log($\"${xl.AddressToString(TopLeft)} -> ${xl.Add";
-__c.LogImpl("934996239",(""+__c.SmartStringFormatter("",(Object)(_xl._addresstostring /*String*/ (_topleft)))+" -> "+__c.SmartStringFormatter("",(Object)(_xl._addresstostring /*String*/ (_bottomright)))+""),0);
+__c.LogImpl("935061775",(""+__c.SmartStringFormatter("",(Object)(_xl._addresstostring /*String*/ (_topleft)))+" -> "+__c.SmartStringFormatter("",(Object)(_xl._addresstostring /*String*/ (_bottomright)))+""),0);
  //BA.debugLineNum = 36;BA.debugLine="If WithContent Then";
 if (_withcontent) { 
  //BA.debugLineNum = 37;BA.debugLine="Log(\"Content:\")";
-__c.LogImpl("934996241","Content:",0);
+__c.LogImpl("935061777","Content:",0);
  //BA.debugLineNum = 38;BA.debugLine="For Each row() As Object In Data";
 {
 final anywheresoftware.b4a.BA.IterableList group18 = _data;
@@ -229,7 +229,7 @@ _sb.Append(BA.ObjectToString(_cell));
 };
  };
  //BA.debugLineNum = 55;BA.debugLine="Log(sb.ToString)";
-__c.LogImpl("934996259",_sb.ToString(),0);
+__c.LogImpl("935061795",_sb.ToString(),0);
  }
 };
  };

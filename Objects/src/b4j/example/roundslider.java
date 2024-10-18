@@ -255,10 +255,10 @@ _xlbl.setText(BA.NumberToString(_mvalue));
 return "";
 }
 public int  _getvalue() throws Exception{
- //BA.debugLineNum = 175;BA.debugLine="Public Sub getValue As Int";
- //BA.debugLineNum = 176;BA.debugLine="Return mValue";
+ //BA.debugLineNum = 182;BA.debugLine="Public Sub getValue As Int";
+ //BA.debugLineNum = 183;BA.debugLine="Return mValue";
 if (true) return _mvalue;
- //BA.debugLineNum = 177;BA.debugLine="End Sub";
+ //BA.debugLineNum = 184;BA.debugLine="End Sub";
 return 0;
 }
 public String  _initialize(anywheresoftware.b4a.BA _ba,Object _callback,String _eventname) throws Exception{
@@ -363,6 +363,17 @@ _mcirclefillcolor = _innercolor;
  //BA.debugLineNum = 67;BA.debugLine="Draw";
 _draw();
  //BA.debugLineNum = 68;BA.debugLine="End Sub";
+return "";
+}
+public String  _setrange(int _newmin,int _newmax) throws Exception{
+ //BA.debugLineNum = 176;BA.debugLine="Public Sub SetRange(NewMin As Int, NewMax As Int)";
+ //BA.debugLineNum = 177;BA.debugLine="mMin = NewMin";
+_mmin = _newmin;
+ //BA.debugLineNum = 178;BA.debugLine="mMax = NewMax";
+_mmax = _newmax;
+ //BA.debugLineNum = 179;BA.debugLine="setValue(mValue)";
+_setvalue(_mvalue);
+ //BA.debugLineNum = 180;BA.debugLine="End Sub";
 return "";
 }
 public String  _setthumbcolor(int _bordercolor,int _innercolor) throws Exception{

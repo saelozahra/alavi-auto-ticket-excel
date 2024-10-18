@@ -135,48 +135,48 @@ InternalSortMode = "";
 public b4j.example.b4xtable._b4xtablecolumn  _addcolumn(String _title,int _columntype) throws Exception{
 b4j.example.b4xtable._b4xtablecolumn _c = null;
 anywheresoftware.b4a.objects.B4XViewWrapper _header = null;
- //BA.debugLineNum = 591;BA.debugLine="Public Sub AddColumn (Title As String, ColumnType";
- //BA.debugLineNum = 592;BA.debugLine="Dim c As B4XTableColumn";
+ //BA.debugLineNum = 592;BA.debugLine="Public Sub AddColumn (Title As String, ColumnType";
+ //BA.debugLineNum = 593;BA.debugLine="Dim c As B4XTableColumn";
 _c = new b4j.example.b4xtable._b4xtablecolumn();
- //BA.debugLineNum = 593;BA.debugLine="c.Initialize";
+ //BA.debugLineNum = 594;BA.debugLine="c.Initialize";
 _c.Initialize();
- //BA.debugLineNum = 594;BA.debugLine="c.Title = Title";
+ //BA.debugLineNum = 595;BA.debugLine="c.Title = Title";
 _c.Title /*String*/  = _title;
- //BA.debugLineNum = 595;BA.debugLine="c.ColumnType = ColumnType";
+ //BA.debugLineNum = 596;BA.debugLine="c.ColumnType = ColumnType";
 _c.ColumnType /*int*/  = _columntype;
- //BA.debugLineNum = 596;BA.debugLine="c.Sortable = ColumnType <> COLUMN_TYPE_VOID";
+ //BA.debugLineNum = 597;BA.debugLine="c.Sortable = ColumnType <> COLUMN_TYPE_VOID";
 _c.Sortable /*boolean*/  = _columntype!=_column_type_void;
- //BA.debugLineNum = 597;BA.debugLine="c.Searchable = ColumnType = COLUMN_TYPE_TEXT";
+ //BA.debugLineNum = 598;BA.debugLine="c.Searchable = ColumnType = COLUMN_TYPE_TEXT";
 _c.Searchable /*boolean*/  = _columntype==_column_type_text;
- //BA.debugLineNum = 598;BA.debugLine="c.CellsLayouts.Initialize";
+ //BA.debugLineNum = 599;BA.debugLine="c.CellsLayouts.Initialize";
 _c.CellsLayouts /*anywheresoftware.b4a.objects.collections.List*/ .Initialize();
- //BA.debugLineNum = 599;BA.debugLine="c.Formatter = DefaultDataFormatter";
+ //BA.debugLineNum = 600;BA.debugLine="c.Formatter = DefaultDataFormatter";
 _c.Formatter /*b4j.example.b4xformatter*/  = _defaultdataformatter;
- //BA.debugLineNum = 600;BA.debugLine="c.Panel = xui.CreatePanel(\"ColumnPanel\")";
+ //BA.debugLineNum = 601;BA.debugLine="c.Panel = xui.CreatePanel(\"ColumnPanel\")";
 _c.Panel /*anywheresoftware.b4a.objects.B4XViewWrapper*/  = _xui.CreatePanel(ba,"ColumnPanel");
- //BA.debugLineNum = 601;BA.debugLine="c.Panel.Tag = c";
+ //BA.debugLineNum = 602;BA.debugLine="c.Panel.Tag = c";
 _c.Panel /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setTag((Object)(_c));
- //BA.debugLineNum = 602;BA.debugLine="c.Id = Title";
+ //BA.debugLineNum = 603;BA.debugLine="c.Id = Title";
 _c.Id /*String*/  = _title;
- //BA.debugLineNum = 603;BA.debugLine="Columns.Add(c)";
+ //BA.debugLineNum = 604;BA.debugLine="Columns.Add(c)";
 _columns.Add((Object)(_c));
- //BA.debugLineNum = 604;BA.debugLine="VisibleColumns.Add(c)";
+ //BA.debugLineNum = 605;BA.debugLine="VisibleColumns.Add(c)";
 _visiblecolumns.Add((Object)(_c));
- //BA.debugLineNum = 605;BA.debugLine="CreateColumnLayouts(c, mRowsPerPage + 1)";
+ //BA.debugLineNum = 606;BA.debugLine="CreateColumnLayouts(c, mRowsPerPage + 1)";
 _createcolumnlayouts(_c,(int) (_mrowsperpage+1));
- //BA.debugLineNum = 606;BA.debugLine="Dim header As B4XView = GetLabelFromColumn(c, 0)";
+ //BA.debugLineNum = 607;BA.debugLine="Dim header As B4XView = GetLabelFromColumn(c, 0)";
 _header = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _header = _getlabelfromcolumn(_c,(int) (0));
- //BA.debugLineNum = 607;BA.debugLine="SetTextOrCSBuilderToLabel (header, Title)";
+ //BA.debugLineNum = 608;BA.debugLine="SetTextOrCSBuilderToLabel (header, Title)";
 _settextorcsbuildertolabel(_header,(Object)(_title));
- //BA.debugLineNum = 608;BA.debugLine="If LayoutLoaded Then";
+ //BA.debugLineNum = 609;BA.debugLine="If LayoutLoaded Then";
 if (_layoutloaded) { 
- //BA.debugLineNum = 609;BA.debugLine="AddColumnToCLV(c)";
+ //BA.debugLineNum = 610;BA.debugLine="AddColumnToCLV(c)";
 _addcolumntoclv(_c);
  };
- //BA.debugLineNum = 611;BA.debugLine="Return c";
+ //BA.debugLineNum = 612;BA.debugLine="Return c";
 if (true) return _c;
- //BA.debugLineNum = 612;BA.debugLine="End Sub";
+ //BA.debugLineNum = 613;BA.debugLine="End Sub";
 return null;
 }
 public String  _addcolumntoclv(b4j.example.b4xtable._b4xtablecolumn _c) throws Exception{
@@ -195,8 +195,8 @@ return "";
 }
 public String  _buildlayoutscache(int _size) throws Exception{
 b4j.example.b4xtable._b4xtablecolumn _c = null;
- //BA.debugLineNum = 615;BA.debugLine="Public Sub BuildLayoutsCache (Size As Int)";
- //BA.debugLineNum = 616;BA.debugLine="For Each c As B4XTableColumn In Columns";
+ //BA.debugLineNum = 616;BA.debugLine="Public Sub BuildLayoutsCache (Size As Int)";
+ //BA.debugLineNum = 617;BA.debugLine="For Each c As B4XTableColumn In Columns";
 {
 final anywheresoftware.b4a.BA.IterableList group1 = _columns;
 final int groupLen1 = group1.getSize()
@@ -204,11 +204,11 @@ final int groupLen1 = group1.getSize()
 ;
 for (; index1 < groupLen1;index1++){
 _c = (b4j.example.b4xtable._b4xtablecolumn)(group1.Get(index1));
- //BA.debugLineNum = 617;BA.debugLine="CreateColumnLayouts(c, Size + 1)";
+ //BA.debugLineNum = 618;BA.debugLine="CreateColumnLayouts(c, Size + 1)";
 _createcolumnlayouts(_c,(int) (_size+1));
  }
 };
- //BA.debugLineNum = 619;BA.debugLine="End Sub";
+ //BA.debugLineNum = 620;BA.debugLine="End Sub";
 return "";
 }
 public Object[]  _buildquery(boolean _withpagelimit) throws Exception{
@@ -380,12 +380,12 @@ _c.ComputedWidth /*int*/  = (int) (_c.ComputedWidth /*int*/ +1);
 return "";
 }
 public String  _cell_mouseclicked(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 750;BA.debugLine="Private Sub Cell_MouseClicked (EventData As MouseE";
- //BA.debugLineNum = 751;BA.debugLine="EventData.Consume";
+ //BA.debugLineNum = 751;BA.debugLine="Private Sub Cell_MouseClicked (EventData As MouseE";
+ //BA.debugLineNum = 752;BA.debugLine="EventData.Consume";
 _eventdata.Consume();
- //BA.debugLineNum = 752;BA.debugLine="CellClicked(Sender, EventData.SecondaryButtonPres";
+ //BA.debugLineNum = 753;BA.debugLine="CellClicked(Sender, EventData.SecondaryButtonPres";
 _cellclicked((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(__c.Sender(ba))),_eventdata.getSecondaryButtonPressed());
- //BA.debugLineNum = 753;BA.debugLine="End Sub";
+ //BA.debugLineNum = 754;BA.debugLine="End Sub";
 return "";
 }
 public void  _cellclicked(anywheresoftware.b4a.objects.B4XViewWrapper _pnl,boolean _longclicked) throws Exception{
@@ -418,7 +418,7 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 780;BA.debugLine="If DateTime.Now < LastCellClickEvent + 20 Then Re";
+ //BA.debugLineNum = 781;BA.debugLine="If DateTime.Now < LastCellClickEvent + 20 Then Re";
 if (true) break;
 
 case 1:
@@ -438,15 +438,15 @@ case 6:
 //C
 this.state = 7;
 ;
- //BA.debugLineNum = 781;BA.debugLine="LastCellClickEvent = DateTime.Now";
+ //BA.debugLineNum = 782;BA.debugLine="LastCellClickEvent = DateTime.Now";
 parent._lastcellclickevent = parent.__c.DateTime.getNow();
- //BA.debugLineNum = 782;BA.debugLine="Dim column As B4XTableColumn = pnl.Parent.Tag";
+ //BA.debugLineNum = 783;BA.debugLine="Dim column As B4XTableColumn = pnl.Parent.Tag";
 _column = (b4j.example.b4xtable._b4xtablecolumn)(_pnl.getParent().getTag());
- //BA.debugLineNum = 783;BA.debugLine="Dim Row As Int = pnl.Tag - 1";
+ //BA.debugLineNum = 784;BA.debugLine="Dim Row As Int = pnl.Tag - 1";
 _row = (int) ((double)(BA.ObjectToNumber(_pnl.getTag()))-1);
- //BA.debugLineNum = 784;BA.debugLine="Dim e As String";
+ //BA.debugLineNum = 785;BA.debugLine="Dim e As String";
 _e = "";
- //BA.debugLineNum = 785;BA.debugLine="If Row = -1 Then";
+ //BA.debugLineNum = 786;BA.debugLine="If Row = -1 Then";
 if (true) break;
 
 case 7:
@@ -461,7 +461,7 @@ this.state = 20;
 case 9:
 //C
 this.state = 10;
- //BA.debugLineNum = 786;BA.debugLine="If LongClicked Then";
+ //BA.debugLineNum = 787;BA.debugLine="If LongClicked Then";
 if (true) break;
 
 case 10:
@@ -476,20 +476,20 @@ this.state = 14;
 case 12:
 //C
 this.state = 15;
- //BA.debugLineNum = 787;BA.debugLine="e = \"_headerlongclicked\"";
+ //BA.debugLineNum = 788;BA.debugLine="e = \"_headerlongclicked\"";
 _e = "_headerlongclicked";
  if (true) break;
 
 case 14:
 //C
 this.state = 15;
- //BA.debugLineNum = 789;BA.debugLine="e = \"_headerclicked\"";
+ //BA.debugLineNum = 790;BA.debugLine="e = \"_headerclicked\"";
 _e = "_headerclicked";
- //BA.debugLineNum = 790;BA.debugLine="HeaderClicked(column)";
+ //BA.debugLineNum = 791;BA.debugLine="HeaderClicked(column)";
 parent._headerclicked(_column);
  if (true) break;
 ;
- //BA.debugLineNum = 792;BA.debugLine="If xui.SubExists(mCallBack, mEventName & e, 1) T";
+ //BA.debugLineNum = 793;BA.debugLine="If xui.SubExists(mCallBack, mEventName & e, 1) T";
 
 case 15:
 //if
@@ -501,7 +501,7 @@ this.state = 17;
 case 17:
 //C
 this.state = 18;
- //BA.debugLineNum = 796;BA.debugLine="CallSub2(mCallBack, mEventName & e, column.Id)";
+ //BA.debugLineNum = 797;BA.debugLine="CallSub2(mCallBack, mEventName & e, column.Id)";
 parent.__c.CallSubNew2(ba,parent._mcallback,parent._meventname+_e,(Object)(_column.Id /*String*/ ));
  if (true) break;
 
@@ -514,9 +514,9 @@ this.state = 61;
 case 20:
 //C
 this.state = 21;
- //BA.debugLineNum = 799;BA.debugLine="Dim RowId As Long = VisibleRowIds.Get(Row)";
+ //BA.debugLineNum = 800;BA.debugLine="Dim RowId As Long = VisibleRowIds.Get(Row)";
 _rowid = BA.ObjectToLongNumber(parent._visiblerowids.Get(_row));
- //BA.debugLineNum = 800;BA.debugLine="If RowId > 0 Then";
+ //BA.debugLineNum = 801;BA.debugLine="If RowId > 0 Then";
 if (true) break;
 
 case 21:
@@ -529,9 +529,9 @@ this.state = 23;
 case 23:
 //C
 this.state = 24;
- //BA.debugLineNum = 801;BA.debugLine="Dim clr As Int";
+ //BA.debugLineNum = 802;BA.debugLine="Dim clr As Int";
 _clr = 0;
- //BA.debugLineNum = 802;BA.debugLine="If Row Mod 2 = 0 Then clr = EvenRowColor Else c";
+ //BA.debugLineNum = 803;BA.debugLine="If Row Mod 2 = 0 Then clr = EvenRowColor Else c";
 if (true) break;
 
 case 24:
@@ -560,7 +560,7 @@ case 31:
 //C
 this.state = 32;
 ;
- //BA.debugLineNum = 804;BA.debugLine="If LongClicked Then";
+ //BA.debugLineNum = 805;BA.debugLine="If LongClicked Then";
 if (true) break;
 
 case 32:
@@ -575,16 +575,16 @@ this.state = 36;
 case 34:
 //C
 this.state = 43;
- //BA.debugLineNum = 805;BA.debugLine="e = \"_CellLongClicked\"";
+ //BA.debugLineNum = 806;BA.debugLine="e = \"_CellLongClicked\"";
 _e = "_CellLongClicked";
  if (true) break;
 
 case 36:
 //C
 this.state = 37;
- //BA.debugLineNum = 807;BA.debugLine="e = \"_cellclicked\"";
+ //BA.debugLineNum = 808;BA.debugLine="e = \"_cellclicked\"";
 _e = "_cellclicked";
- //BA.debugLineNum = 808;BA.debugLine="If SelectionColor <> 0 Then pnl.SetColorAnimat";
+ //BA.debugLineNum = 809;BA.debugLine="If SelectionColor <> 0 Then pnl.SetColorAnimat";
 if (true) break;
 
 case 37:
@@ -606,7 +606,7 @@ this.state = 43;
 ;
  if (true) break;
 ;
- //BA.debugLineNum = 811;BA.debugLine="If xui.SubExists(mCallBack, mEventName & e, 2)";
+ //BA.debugLineNum = 812;BA.debugLine="If xui.SubExists(mCallBack, mEventName & e, 2)";
 
 case 43:
 //if
@@ -618,11 +618,11 @@ this.state = 45;
 case 45:
 //C
 this.state = 46;
- //BA.debugLineNum = 815;BA.debugLine="CallSub3(mCallBack, mEventName & e, column.Id,";
+ //BA.debugLineNum = 816;BA.debugLine="CallSub3(mCallBack, mEventName & e, column.Id,";
 parent.__c.CallSubNew3(ba,parent._mcallback,parent._meventname+_e,(Object)(_column.Id /*String*/ ),parent._visiblerowids.Get(_row));
  if (true) break;
 ;
- //BA.debugLineNum = 817;BA.debugLine="If LongClicked = False Then";
+ //BA.debugLineNum = 818;BA.debugLine="If LongClicked = False Then";
 
 case 46:
 //if
@@ -634,7 +634,7 @@ this.state = 48;
 case 48:
 //C
 this.state = 49;
- //BA.debugLineNum = 818;BA.debugLine="Sleep(200)";
+ //BA.debugLineNum = 819;BA.debugLine="Sleep(200)";
 parent.__c.Sleep(ba,this,(int) (200));
 this.state = 62;
 return;
@@ -642,7 +642,7 @@ case 62:
 //C
 this.state = 49;
 ;
- //BA.debugLineNum = 819;BA.debugLine="If pnl.IsInitialized Then";
+ //BA.debugLineNum = 820;BA.debugLine="If pnl.IsInitialized Then";
 if (true) break;
 
 case 49:
@@ -655,7 +655,7 @@ this.state = 51;
 case 51:
 //C
 this.state = 52;
- //BA.debugLineNum = 820;BA.debugLine="If SelectionColor <> 0 Then pnl.SetColorAnima";
+ //BA.debugLineNum = 821;BA.debugLine="If SelectionColor <> 0 Then pnl.SetColorAnima";
 if (true) break;
 
 case 52:
@@ -699,7 +699,7 @@ case 61:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 825;BA.debugLine="End Sub";
+ //BA.debugLineNum = 826;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -1060,39 +1060,39 @@ _lblnumber.setText("");
 return "";
 }
 public String  _columntosqltype(b4j.example.b4xtable._b4xtablecolumn _c) throws Exception{
- //BA.debugLineNum = 707;BA.debugLine="Private Sub ColumnToSQLType (c As B4XTableColumn)";
- //BA.debugLineNum = 708;BA.debugLine="If c.ColumnType = COLUMN_TYPE_TEXT Then Return \"T";
+ //BA.debugLineNum = 708;BA.debugLine="Private Sub ColumnToSQLType (c As B4XTableColumn)";
+ //BA.debugLineNum = 709;BA.debugLine="If c.ColumnType = COLUMN_TYPE_TEXT Then Return \"T";
 if (_c.ColumnType /*int*/ ==_column_type_text) { 
 if (true) return "TEXT";}
 else {
 if (true) return "INTEGER";};
- //BA.debugLineNum = 709;BA.debugLine="End Sub";
+ //BA.debugLineNum = 710;BA.debugLine="End Sub";
 return "";
 }
 public anywheresoftware.b4a.objects.B4XViewWrapper  _createcellviews() throws Exception{
 anywheresoftware.b4a.objects.B4XViewWrapper _p = null;
 anywheresoftware.b4j.objects.LabelWrapper _lbl = null;
 anywheresoftware.b4a.objects.B4XViewWrapper _xlbl = null;
- //BA.debugLineNum = 712;BA.debugLine="Private Sub CreateCellViews As B4XView";
- //BA.debugLineNum = 713;BA.debugLine="Dim p As B4XView = xui.CreatePanel(\"cell\")";
+ //BA.debugLineNum = 713;BA.debugLine="Private Sub CreateCellViews As B4XView";
+ //BA.debugLineNum = 714;BA.debugLine="Dim p As B4XView = xui.CreatePanel(\"cell\")";
 _p = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _p = _xui.CreatePanel(ba,"cell");
- //BA.debugLineNum = 714;BA.debugLine="Dim lbl As Label";
+ //BA.debugLineNum = 715;BA.debugLine="Dim lbl As Label";
 _lbl = new anywheresoftware.b4j.objects.LabelWrapper();
- //BA.debugLineNum = 715;BA.debugLine="lbl.Initialize(\"lbl\")";
+ //BA.debugLineNum = 716;BA.debugLine="lbl.Initialize(\"lbl\")";
 _lbl.Initialize(ba,"lbl");
- //BA.debugLineNum = 716;BA.debugLine="SetMouseTransparent(lbl)";
+ //BA.debugLineNum = 717;BA.debugLine="SetMouseTransparent(lbl)";
 _setmousetransparent((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_lbl.getObject())));
- //BA.debugLineNum = 717;BA.debugLine="Dim xlbl As B4XView = lbl";
+ //BA.debugLineNum = 718;BA.debugLine="Dim xlbl As B4XView = lbl";
 _xlbl = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _xlbl = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_lbl.getObject()));
- //BA.debugLineNum = 718;BA.debugLine="xlbl.SetTextAlignment(\"CENTER\", \"CENTER\")";
+ //BA.debugLineNum = 719;BA.debugLine="xlbl.SetTextAlignment(\"CENTER\", \"CENTER\")";
 _xlbl.SetTextAlignment("CENTER","CENTER");
- //BA.debugLineNum = 719;BA.debugLine="p.AddView(xlbl, 0, 0, 0, 0)";
+ //BA.debugLineNum = 720;BA.debugLine="p.AddView(xlbl, 0, 0, 0, 0)";
 _p.AddView((javafx.scene.Node)(_xlbl.getObject()),0,0,0,0);
- //BA.debugLineNum = 720;BA.debugLine="Return p";
+ //BA.debugLineNum = 721;BA.debugLine="Return p";
 if (true) return _p;
- //BA.debugLineNum = 721;BA.debugLine="End Sub";
+ //BA.debugLineNum = 722;BA.debugLine="End Sub";
 return null;
 }
 public String  _createcolumnlayouts(b4j.example.b4xtable._b4xtablecolumn _c,int _size) throws Exception{
@@ -1102,63 +1102,63 @@ anywheresoftware.b4a.objects.B4XViewWrapper _lbl = null;
 int _clr = 0;
 int _tclr = 0;
 anywheresoftware.b4a.objects.B4XViewWrapper.B4XFont _fnt = null;
- //BA.debugLineNum = 621;BA.debugLine="Private Sub CreateColumnLayouts (c As B4XTableColu";
- //BA.debugLineNum = 622;BA.debugLine="For i = c.CellsLayouts.Size To Size - 1";
+ //BA.debugLineNum = 622;BA.debugLine="Private Sub CreateColumnLayouts (c As B4XTableColu";
+ //BA.debugLineNum = 623;BA.debugLine="For i = c.CellsLayouts.Size To Size - 1";
 {
 final int step1 = 1;
 final int limit1 = (int) (_size-1);
 _i = _c.CellsLayouts /*anywheresoftware.b4a.objects.collections.List*/ .getSize() ;
 for (;_i <= limit1 ;_i = _i + step1 ) {
- //BA.debugLineNum = 623;BA.debugLine="Dim p As B4XView = CreateCellViews";
+ //BA.debugLineNum = 624;BA.debugLine="Dim p As B4XView = CreateCellViews";
 _p = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _p = _createcellviews();
- //BA.debugLineNum = 624;BA.debugLine="Dim lbl As B4XView = p.GetView(c.LabelIndex)";
+ //BA.debugLineNum = 625;BA.debugLine="Dim lbl As B4XView = p.GetView(c.LabelIndex)";
 _lbl = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _lbl = _p.GetView(_c.LabelIndex /*int*/ );
- //BA.debugLineNum = 625;BA.debugLine="c.CellsLayouts.Add(p)";
+ //BA.debugLineNum = 626;BA.debugLine="c.CellsLayouts.Add(p)";
 _c.CellsLayouts /*anywheresoftware.b4a.objects.collections.List*/ .Add((Object)(_p.getObject()));
- //BA.debugLineNum = 626;BA.debugLine="Dim clr, tclr As Int";
+ //BA.debugLineNum = 627;BA.debugLine="Dim clr, tclr As Int";
 _clr = 0;
 _tclr = 0;
- //BA.debugLineNum = 627;BA.debugLine="Dim fnt As B4XFont";
+ //BA.debugLineNum = 628;BA.debugLine="Dim fnt As B4XFont";
 _fnt = new anywheresoftware.b4a.objects.B4XViewWrapper.B4XFont();
- //BA.debugLineNum = 628;BA.debugLine="If i = 0 Then";
+ //BA.debugLineNum = 629;BA.debugLine="If i = 0 Then";
 if (_i==0) { 
- //BA.debugLineNum = 629;BA.debugLine="clr = HeaderColor";
+ //BA.debugLineNum = 630;BA.debugLine="clr = HeaderColor";
 _clr = _headercolor;
- //BA.debugLineNum = 630;BA.debugLine="tclr = HeaderTextColor";
+ //BA.debugLineNum = 631;BA.debugLine="tclr = HeaderTextColor";
 _tclr = _headertextcolor;
- //BA.debugLineNum = 631;BA.debugLine="fnt = HeaderFont";
+ //BA.debugLineNum = 632;BA.debugLine="fnt = HeaderFont";
 _fnt = _headerfont;
  }else {
- //BA.debugLineNum = 633;BA.debugLine="fnt = LabelsFont";
+ //BA.debugLineNum = 634;BA.debugLine="fnt = LabelsFont";
 _fnt = _labelsfont;
- //BA.debugLineNum = 634;BA.debugLine="tclr = TextColor";
+ //BA.debugLineNum = 635;BA.debugLine="tclr = TextColor";
 _tclr = _textcolor;
- //BA.debugLineNum = 635;BA.debugLine="If i Mod 2 = 1 Then";
+ //BA.debugLineNum = 636;BA.debugLine="If i Mod 2 = 1 Then";
 if (_i%2==1) { 
- //BA.debugLineNum = 636;BA.debugLine="clr = EvenRowColor";
+ //BA.debugLineNum = 637;BA.debugLine="clr = EvenRowColor";
 _clr = _evenrowcolor;
  }else {
- //BA.debugLineNum = 638;BA.debugLine="clr = OddRowColor";
+ //BA.debugLineNum = 639;BA.debugLine="clr = OddRowColor";
 _clr = _oddrowcolor;
  };
  };
- //BA.debugLineNum = 641;BA.debugLine="lbl.Font = fnt";
+ //BA.debugLineNum = 642;BA.debugLine="lbl.Font = fnt";
 _lbl.setFont(_fnt);
- //BA.debugLineNum = 642;BA.debugLine="p.SetColorAndBorder(clr, 1dip, GridColor, 0)";
+ //BA.debugLineNum = 643;BA.debugLine="p.SetColorAndBorder(clr, 1dip, GridColor, 0)";
 _p.SetColorAndBorder(_clr,__c.DipToCurrent((int) (1)),_gridcolor,0);
- //BA.debugLineNum = 643;BA.debugLine="lbl.TextColor = tclr";
+ //BA.debugLineNum = 644;BA.debugLine="lbl.TextColor = tclr";
 _lbl.setTextColor(_tclr);
- //BA.debugLineNum = 644;BA.debugLine="lbl.SetTextAlignment(\"CENTER\", \"CENTER\")";
+ //BA.debugLineNum = 645;BA.debugLine="lbl.SetTextAlignment(\"CENTER\", \"CENTER\")";
 _lbl.SetTextAlignment("CENTER","CENTER");
- //BA.debugLineNum = 645;BA.debugLine="p.Tag = i";
+ //BA.debugLineNum = 646;BA.debugLine="p.Tag = i";
 _p.setTag((Object)(_i));
- //BA.debugLineNum = 646;BA.debugLine="c.Panel.AddView(p, 0, 0, 0, 0)";
+ //BA.debugLineNum = 647;BA.debugLine="c.Panel.AddView(p, 0, 0, 0, 0)";
 _c.Panel /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .AddView((javafx.scene.Node)(_p.getObject()),0,0,0,0);
  }
 };
- //BA.debugLineNum = 648;BA.debugLine="End Sub";
+ //BA.debugLineNum = 649;BA.debugLine="End Sub";
 return "";
 }
 public String  _createdataview(String _whereclause) throws Exception{
@@ -1182,16 +1182,16 @@ public String  _createtable() throws Exception{
 anywheresoftware.b4a.keywords.StringBuilderWrapper _sb = null;
 int _i = 0;
 b4j.example.b4xtable._b4xtablecolumn _column = null;
- //BA.debugLineNum = 691;BA.debugLine="Private Sub CreateTable";
- //BA.debugLineNum = 692;BA.debugLine="Dim sb As StringBuilder";
+ //BA.debugLineNum = 692;BA.debugLine="Private Sub CreateTable";
+ //BA.debugLineNum = 693;BA.debugLine="Dim sb As StringBuilder";
 _sb = new anywheresoftware.b4a.keywords.StringBuilderWrapper();
- //BA.debugLineNum = 693;BA.debugLine="sb.Initialize";
+ //BA.debugLineNum = 694;BA.debugLine="sb.Initialize";
 _sb.Initialize();
- //BA.debugLineNum = 694;BA.debugLine="sb.Append(\"CREATE TABLE data (\")";
+ //BA.debugLineNum = 695;BA.debugLine="sb.Append(\"CREATE TABLE data (\")";
 _sb.Append("CREATE TABLE data (");
- //BA.debugLineNum = 695;BA.debugLine="Dim i As Int";
+ //BA.debugLineNum = 696;BA.debugLine="Dim i As Int";
 _i = 0;
- //BA.debugLineNum = 696;BA.debugLine="For Each Column As B4XTableColumn In Columns";
+ //BA.debugLineNum = 697;BA.debugLine="For Each Column As B4XTableColumn In Columns";
 {
 final anywheresoftware.b4a.BA.IterableList group5 = _columns;
 final int groupLen5 = group5.getSize()
@@ -1199,24 +1199,24 @@ final int groupLen5 = group5.getSize()
 ;
 for (; index5 < groupLen5;index5++){
 _column = (b4j.example.b4xtable._b4xtablecolumn)(group5.Get(index5));
- //BA.debugLineNum = 697;BA.debugLine="If Column.ColumnType = COLUMN_TYPE_VOID Then Con";
+ //BA.debugLineNum = 698;BA.debugLine="If Column.ColumnType = COLUMN_TYPE_VOID Then Con";
 if (_column.ColumnType /*int*/ ==_column_type_void) { 
 if (true) continue;};
- //BA.debugLineNum = 698;BA.debugLine="Column.SQLID = \"c\" & i";
+ //BA.debugLineNum = 699;BA.debugLine="Column.SQLID = \"c\" & i";
 _column.SQLID /*String*/  = "c"+BA.NumberToString(_i);
- //BA.debugLineNum = 699;BA.debugLine="sb.Append(Column.SQLID & \" \" & ColumnToSQLType(C";
+ //BA.debugLineNum = 700;BA.debugLine="sb.Append(Column.SQLID & \" \" & ColumnToSQLType(C";
 _sb.Append(_column.SQLID /*String*/ +" "+_columntosqltype(_column)+",");
- //BA.debugLineNum = 700;BA.debugLine="i = i + 1";
+ //BA.debugLineNum = 701;BA.debugLine="i = i + 1";
 _i = (int) (_i+1);
  }
 };
- //BA.debugLineNum = 702;BA.debugLine="sb.Remove(sb.Length - 1, sb.Length)";
+ //BA.debugLineNum = 703;BA.debugLine="sb.Remove(sb.Length - 1, sb.Length)";
 _sb.Remove((int) (_sb.getLength()-1),_sb.getLength());
- //BA.debugLineNum = 703;BA.debugLine="sb.Append(\")\")";
+ //BA.debugLineNum = 704;BA.debugLine="sb.Append(\")\")";
 _sb.Append(")");
- //BA.debugLineNum = 704;BA.debugLine="sql1.ExecNonQuery(sb.ToString)";
+ //BA.debugLineNum = 705;BA.debugLine="sql1.ExecNonQuery(sb.ToString)";
 _sql1.ExecNonQuery(_sb.ToString());
- //BA.debugLineNum = 705;BA.debugLine="End Sub";
+ //BA.debugLineNum = 706;BA.debugLine="End Sub";
 return "";
 }
 public void  _designercreateview(Object _base,anywheresoftware.b4j.objects.LabelWrapper _lbl,anywheresoftware.b4a.objects.collections.Map _props) throws Exception{
@@ -1355,17 +1355,17 @@ if (true) return _c;
 return null;
 }
 public int  _getcurrentpage() throws Exception{
- //BA.debugLineNum = 898;BA.debugLine="Public Sub getCurrentPage As Int";
- //BA.debugLineNum = 899;BA.debugLine="Return mCurrentPage";
+ //BA.debugLineNum = 899;BA.debugLine="Public Sub getCurrentPage As Int";
+ //BA.debugLineNum = 900;BA.debugLine="Return mCurrentPage";
 if (true) return _mcurrentpage;
- //BA.debugLineNum = 900;BA.debugLine="End Sub";
+ //BA.debugLineNum = 901;BA.debugLine="End Sub";
 return 0;
 }
 public int  _getfirstrowindex() throws Exception{
- //BA.debugLineNum = 888;BA.debugLine="Public Sub getFirstRowIndex As Int";
- //BA.debugLineNum = 889;BA.debugLine="Return mFirstRowIndex";
+ //BA.debugLineNum = 889;BA.debugLine="Public Sub getFirstRowIndex As Int";
+ //BA.debugLineNum = 890;BA.debugLine="Return mFirstRowIndex";
 if (true) return _mfirstrowindex;
- //BA.debugLineNum = 890;BA.debugLine="End Sub";
+ //BA.debugLineNum = 891;BA.debugLine="End Sub";
 return 0;
 }
 public anywheresoftware.b4a.objects.B4XViewWrapper  _getlabelfromcolumn(b4j.example.b4xtable._b4xtablecolumn _c,int _index) throws Exception{
@@ -1383,17 +1383,17 @@ public anywheresoftware.b4a.objects.collections.Map  _getrow(long _rowid) throws
 anywheresoftware.b4a.objects.collections.Map _m = null;
 anywheresoftware.b4j.objects.SQL.ResultSetWrapper _rs = null;
 b4j.example.b4xtable._b4xtablecolumn _c = null;
- //BA.debugLineNum = 861;BA.debugLine="Public Sub GetRow(RowId As Long) As Map";
- //BA.debugLineNum = 862;BA.debugLine="Dim m As Map";
+ //BA.debugLineNum = 862;BA.debugLine="Public Sub GetRow(RowId As Long) As Map";
+ //BA.debugLineNum = 863;BA.debugLine="Dim m As Map";
 _m = new anywheresoftware.b4a.objects.collections.Map();
- //BA.debugLineNum = 863;BA.debugLine="m.Initialize";
+ //BA.debugLineNum = 864;BA.debugLine="m.Initialize";
 _m.Initialize();
- //BA.debugLineNum = 864;BA.debugLine="Dim rs As ResultSet = sql1.ExecQuery2(\"SELECT * F";
+ //BA.debugLineNum = 865;BA.debugLine="Dim rs As ResultSet = sql1.ExecQuery2(\"SELECT * F";
 _rs = new anywheresoftware.b4j.objects.SQL.ResultSetWrapper();
 _rs = _sql1.ExecQuery2("SELECT * FROM data WHERE rowid = ?",anywheresoftware.b4a.keywords.Common.ArrayToList(new String[]{BA.NumberToString(_rowid)}));
- //BA.debugLineNum = 865;BA.debugLine="If rs.NextRow Then";
+ //BA.debugLineNum = 866;BA.debugLine="If rs.NextRow Then";
 if (_rs.NextRow()) { 
- //BA.debugLineNum = 866;BA.debugLine="For Each c As B4XTableColumn In Columns";
+ //BA.debugLineNum = 867;BA.debugLine="For Each c As B4XTableColumn In Columns";
 {
 final anywheresoftware.b4a.BA.IterableList group5 = _columns;
 final int groupLen5 = group5.getSize()
@@ -1401,18 +1401,18 @@ final int groupLen5 = group5.getSize()
 ;
 for (; index5 < groupLen5;index5++){
 _c = (b4j.example.b4xtable._b4xtablecolumn)(group5.Get(index5));
- //BA.debugLineNum = 867;BA.debugLine="Select c.ColumnType";
+ //BA.debugLineNum = 868;BA.debugLine="Select c.ColumnType";
 switch (BA.switchObjectToInt(_c.ColumnType /*int*/ ,_column_type_text,_column_type_numbers,_column_type_date)) {
 case 0: {
- //BA.debugLineNum = 869;BA.debugLine="m.Put(c.Id, rs.GetString(c.SQLID))";
+ //BA.debugLineNum = 870;BA.debugLine="m.Put(c.Id, rs.GetString(c.SQLID))";
 _m.Put((Object)(_c.Id /*String*/ ),(Object)(_rs.GetString(_c.SQLID /*String*/ )));
  break; }
 case 1: {
- //BA.debugLineNum = 871;BA.debugLine="m.Put(c.Id, rs.GetDouble(c.SQLID))";
+ //BA.debugLineNum = 872;BA.debugLine="m.Put(c.Id, rs.GetDouble(c.SQLID))";
 _m.Put((Object)(_c.Id /*String*/ ),(Object)(_rs.GetDouble(_c.SQLID /*String*/ )));
  break; }
 case 2: {
- //BA.debugLineNum = 873;BA.debugLine="m.Put(c.Id, rs.GetLong(c.SQLID))";
+ //BA.debugLineNum = 874;BA.debugLine="m.Put(c.Id, rs.GetLong(c.SQLID))";
 _m.Put((Object)(_c.Id /*String*/ ),(Object)(_rs.GetLong(_c.SQLID /*String*/ )));
  break; }
 }
@@ -1420,33 +1420,33 @@ _m.Put((Object)(_c.Id /*String*/ ),(Object)(_rs.GetLong(_c.SQLID /*String*/ )));
  }
 };
  };
- //BA.debugLineNum = 877;BA.debugLine="rs.Close";
+ //BA.debugLineNum = 878;BA.debugLine="rs.Close";
 _rs.Close();
- //BA.debugLineNum = 878;BA.debugLine="Return m";
+ //BA.debugLineNum = 879;BA.debugLine="Return m";
 if (true) return _m;
- //BA.debugLineNum = 879;BA.debugLine="End Sub";
+ //BA.debugLineNum = 880;BA.debugLine="End Sub";
 return null;
 }
 public int  _getrowsperpage() throws Exception{
- //BA.debugLineNum = 893;BA.debugLine="Public Sub getRowsPerPage As Int";
- //BA.debugLineNum = 894;BA.debugLine="Return mRowsPerPage";
+ //BA.debugLineNum = 894;BA.debugLine="Public Sub getRowsPerPage As Int";
+ //BA.debugLineNum = 895;BA.debugLine="Return mRowsPerPage";
 if (true) return _mrowsperpage;
- //BA.debugLineNum = 895;BA.debugLine="End Sub";
+ //BA.debugLineNum = 896;BA.debugLine="End Sub";
 return 0;
 }
 public int  _getsize() throws Exception{
- //BA.debugLineNum = 960;BA.debugLine="Public Sub getSize As Int";
- //BA.debugLineNum = 961;BA.debugLine="Return CountAll";
+ //BA.debugLineNum = 962;BA.debugLine="Public Sub getSize As Int";
+ //BA.debugLineNum = 963;BA.debugLine="Return CountAll";
 if (true) return _countall;
- //BA.debugLineNum = 962;BA.debugLine="End Sub";
+ //BA.debugLineNum = 964;BA.debugLine="End Sub";
 return 0;
 }
 public String  _headerclicked(b4j.example.b4xtable._b4xtablecolumn _col) throws Exception{
 b4j.example.b4xtable._b4xtablecolumn _c = null;
- //BA.debugLineNum = 827;BA.debugLine="Private Sub HeaderClicked (col As B4XTableColumn)";
- //BA.debugLineNum = 828;BA.debugLine="If col.Sortable Then";
+ //BA.debugLineNum = 828;BA.debugLine="Private Sub HeaderClicked (col As B4XTableColumn)";
+ //BA.debugLineNum = 829;BA.debugLine="If col.Sortable Then";
 if (_col.Sortable /*boolean*/ ) { 
- //BA.debugLineNum = 829;BA.debugLine="For Each c As B4XTableColumn In Columns";
+ //BA.debugLineNum = 830;BA.debugLine="For Each c As B4XTableColumn In Columns";
 {
 final anywheresoftware.b4a.BA.IterableList group2 = _columns;
 final int groupLen2 = group2.getSize()
@@ -1454,27 +1454,27 @@ final int groupLen2 = group2.getSize()
 ;
 for (; index2 < groupLen2;index2++){
 _c = (b4j.example.b4xtable._b4xtablecolumn)(group2.Get(index2));
- //BA.debugLineNum = 830;BA.debugLine="If c = col Then";
+ //BA.debugLineNum = 831;BA.debugLine="If c = col Then";
 if ((_c).equals(_col)) { 
- //BA.debugLineNum = 831;BA.debugLine="If c.InternalSortMode = \"ASC\" Then c.InternalS";
+ //BA.debugLineNum = 832;BA.debugLine="If c.InternalSortMode = \"ASC\" Then c.InternalS";
 if ((_c.InternalSortMode /*String*/ ).equals("ASC")) { 
 _c.InternalSortMode /*String*/  = "DESC";}
 else {
 _c.InternalSortMode /*String*/  = "ASC";};
  }else {
- //BA.debugLineNum = 833;BA.debugLine="c.InternalSortMode = \"\"";
+ //BA.debugLineNum = 834;BA.debugLine="c.InternalSortMode = \"\"";
 _c.InternalSortMode /*String*/  = "";
  };
  }
 };
- //BA.debugLineNum = 836;BA.debugLine="mFirstRowIndex = 0";
+ //BA.debugLineNum = 837;BA.debugLine="mFirstRowIndex = 0";
 _mfirstrowindex = (int) (0);
- //BA.debugLineNum = 837;BA.debugLine="UpdateSortIcon";
+ //BA.debugLineNum = 838;BA.debugLine="UpdateSortIcon";
 _updatesorticon();
- //BA.debugLineNum = 838;BA.debugLine="UpdateData (False)";
+ //BA.debugLineNum = 839;BA.debugLine="UpdateData (False)";
 _updatedata(__c.False);
  };
- //BA.debugLineNum = 840;BA.debugLine="End Sub";
+ //BA.debugLineNum = 841;BA.debugLine="End Sub";
 return "";
 }
 public void  _implupdatedatafromquery(String _query,Object _args,int _totalcount,boolean _dontsleep) throws Exception{
@@ -1977,71 +1977,74 @@ _textflow._initialize /*String*/ (ba);
 return "";
 }
 public String  _lblback_click() throws Exception{
- //BA.debugLineNum = 911;BA.debugLine="Private Sub lblBack_Click";
- //BA.debugLineNum = 912;BA.debugLine="If lblBack.Tag = False Then Return";
+ //BA.debugLineNum = 912;BA.debugLine="Private Sub lblBack_Click";
+ //BA.debugLineNum = 913;BA.debugLine="If lblBack.Tag = False Then Return";
 if ((_lblback.getTag()).equals((Object)(__c.False))) { 
 if (true) return "";};
- //BA.debugLineNum = 913;BA.debugLine="setFirstRowIndex (mFirstRowIndex - mRowsPerPage)";
+ //BA.debugLineNum = 914;BA.debugLine="setFirstRowIndex (mFirstRowIndex - mRowsPerPage)";
 _setfirstrowindex((int) (_mfirstrowindex-_mrowsperpage));
- //BA.debugLineNum = 914;BA.debugLine="End Sub";
+ //BA.debugLineNum = 915;BA.debugLine="End Sub";
 return "";
 }
 public String  _lblback_mouseclicked(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 931;BA.debugLine="Private Sub lblBack_MouseClicked (EventData As Mou";
- //BA.debugLineNum = 932;BA.debugLine="lblBack_Click";
+ //BA.debugLineNum = 933;BA.debugLine="Private Sub lblBack_MouseClicked (EventData As Mou";
+ //BA.debugLineNum = 934;BA.debugLine="lblBack_Click";
 _lblback_click();
- //BA.debugLineNum = 933;BA.debugLine="End Sub";
+ //BA.debugLineNum = 935;BA.debugLine="End Sub";
 return "";
 }
 public String  _lblfirst_click() throws Exception{
- //BA.debugLineNum = 906;BA.debugLine="Private Sub lblFirst_Click";
- //BA.debugLineNum = 907;BA.debugLine="If lblFirst.Tag = False Then Return";
+ //BA.debugLineNum = 907;BA.debugLine="Private Sub lblFirst_Click";
+ //BA.debugLineNum = 908;BA.debugLine="If lblFirst.Tag = False Then Return";
 if ((_lblfirst.getTag()).equals((Object)(__c.False))) { 
 if (true) return "";};
- //BA.debugLineNum = 908;BA.debugLine="setFirstRowIndex (0)";
+ //BA.debugLineNum = 909;BA.debugLine="setFirstRowIndex (0)";
 _setfirstrowindex((int) (0));
- //BA.debugLineNum = 909;BA.debugLine="End Sub";
+ //BA.debugLineNum = 910;BA.debugLine="End Sub";
 return "";
 }
 public String  _lblfirst_mouseclicked(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 927;BA.debugLine="Private Sub lblFirst_MouseClicked (EventData As Mo";
- //BA.debugLineNum = 928;BA.debugLine="lblFirst_Click";
+ //BA.debugLineNum = 929;BA.debugLine="Private Sub lblFirst_MouseClicked (EventData As Mo";
+ //BA.debugLineNum = 930;BA.debugLine="lblFirst_Click";
 _lblfirst_click();
- //BA.debugLineNum = 929;BA.debugLine="End Sub";
+ //BA.debugLineNum = 931;BA.debugLine="End Sub";
 return "";
 }
 public String  _lbllast_click() throws Exception{
- //BA.debugLineNum = 916;BA.debugLine="Private Sub lblLast_Click";
- //BA.debugLineNum = 917;BA.debugLine="If lblLast.Tag = False Then Return";
+int _numberofpages = 0;
+ //BA.debugLineNum = 917;BA.debugLine="Private Sub lblLast_Click";
+ //BA.debugLineNum = 918;BA.debugLine="If lblLast.Tag = False Then Return";
 if ((_lbllast.getTag()).equals((Object)(__c.False))) { 
 if (true) return "";};
- //BA.debugLineNum = 918;BA.debugLine="setFirstRowIndex (Floor(mCurrentCount /  mRowsPer";
-_setfirstrowindex((int) (__c.Floor(_mcurrentcount/(double)_mrowsperpage)*_mrowsperpage));
- //BA.debugLineNum = 919;BA.debugLine="End Sub";
+ //BA.debugLineNum = 919;BA.debugLine="Dim NumberOfPages As Int = Ceil(mCurrentCount / m";
+_numberofpages = (int) (__c.Ceil(_mcurrentcount/(double)_mrowsperpage));
+ //BA.debugLineNum = 920;BA.debugLine="setFirstRowIndex ((NumberOfPages - 1) * mRowsPerP";
+_setfirstrowindex((int) ((_numberofpages-1)*_mrowsperpage));
+ //BA.debugLineNum = 921;BA.debugLine="End Sub";
 return "";
 }
 public String  _lbllast_mouseclicked(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 940;BA.debugLine="Private Sub lblLast_MouseClicked (EventData As Mou";
- //BA.debugLineNum = 941;BA.debugLine="lblLast_Click";
+ //BA.debugLineNum = 942;BA.debugLine="Private Sub lblLast_MouseClicked (EventData As Mou";
+ //BA.debugLineNum = 943;BA.debugLine="lblLast_Click";
 _lbllast_click();
- //BA.debugLineNum = 942;BA.debugLine="End Sub";
+ //BA.debugLineNum = 944;BA.debugLine="End Sub";
 return "";
 }
 public String  _lblnext_click() throws Exception{
- //BA.debugLineNum = 921;BA.debugLine="Private Sub lblNext_Click";
- //BA.debugLineNum = 922;BA.debugLine="If lblNext.Tag = False Then Return";
+ //BA.debugLineNum = 923;BA.debugLine="Private Sub lblNext_Click";
+ //BA.debugLineNum = 924;BA.debugLine="If lblNext.Tag = False Then Return";
 if ((_lblnext.getTag()).equals((Object)(__c.False))) { 
 if (true) return "";};
- //BA.debugLineNum = 923;BA.debugLine="setFirstRowIndex (mFirstRowIndex + mRowsPerPage)";
+ //BA.debugLineNum = 925;BA.debugLine="setFirstRowIndex (mFirstRowIndex + mRowsPerPage)";
 _setfirstrowindex((int) (_mfirstrowindex+_mrowsperpage));
- //BA.debugLineNum = 924;BA.debugLine="End Sub";
+ //BA.debugLineNum = 926;BA.debugLine="End Sub";
 return "";
 }
 public String  _lblnext_mouseclicked(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
- //BA.debugLineNum = 936;BA.debugLine="Private Sub lblNext_MouseClicked (EventData As Mou";
- //BA.debugLineNum = 937;BA.debugLine="lblNext_Click";
+ //BA.debugLineNum = 938;BA.debugLine="Private Sub lblNext_MouseClicked (EventData As Mou";
+ //BA.debugLineNum = 939;BA.debugLine="lblNext_Click";
 _lblnext_click();
- //BA.debugLineNum = 938;BA.debugLine="End Sub";
+ //BA.debugLineNum = 940;BA.debugLine="End Sub";
 return "";
 }
 public String  _refresh() throws Exception{
@@ -2329,11 +2332,11 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 946;BA.debugLine="SearchIndex = SearchIndex + 1";
+ //BA.debugLineNum = 948;BA.debugLine="SearchIndex = SearchIndex + 1";
 parent._searchindex = (int) (parent._searchindex+1);
- //BA.debugLineNum = 947;BA.debugLine="Dim MyIndex As Int = SearchIndex";
+ //BA.debugLineNum = 949;BA.debugLine="Dim MyIndex As Int = SearchIndex";
 _myindex = parent._searchindex;
- //BA.debugLineNum = 948;BA.debugLine="Sleep(SleepBeforeSearch)";
+ //BA.debugLineNum = 950;BA.debugLine="Sleep(SleepBeforeSearch)";
 parent.__c.Sleep(ba,this,parent._sleepbeforesearch);
 this.state = 11;
 return;
@@ -2341,7 +2344,7 @@ case 11:
 //C
 this.state = 1;
 ;
- //BA.debugLineNum = 949;BA.debugLine="If MyIndex <> SearchIndex Then";
+ //BA.debugLineNum = 951;BA.debugLine="If MyIndex <> SearchIndex Then";
 if (true) break;
 
 case 1:
@@ -2354,7 +2357,7 @@ this.state = 3;
 case 3:
 //C
 this.state = 4;
- //BA.debugLineNum = 950;BA.debugLine="Return";
+ //BA.debugLineNum = 952;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 
@@ -2362,9 +2365,9 @@ case 4:
 //C
 this.state = 5;
 ;
- //BA.debugLineNum = 952;BA.debugLine="Dim term As String = New.ToLowerCase";
+ //BA.debugLineNum = 954;BA.debugLine="Dim term As String = New.ToLowerCase";
 _term = _new.toLowerCase();
- //BA.debugLineNum = 953;BA.debugLine="If term = FilterText Then Return";
+ //BA.debugLineNum = 955;BA.debugLine="If term = FilterText Then Return";
 if (true) break;
 
 case 5:
@@ -2384,13 +2387,13 @@ case 10:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 954;BA.debugLine="FilterText = term";
+ //BA.debugLineNum = 956;BA.debugLine="FilterText = term";
 parent._filtertext = _term;
- //BA.debugLineNum = 955;BA.debugLine="mFirstRowIndex = 0";
+ //BA.debugLineNum = 957;BA.debugLine="mFirstRowIndex = 0";
 parent._mfirstrowindex = (int) (0);
- //BA.debugLineNum = 956;BA.debugLine="UpdateData (False)";
+ //BA.debugLineNum = 958;BA.debugLine="UpdateData (False)";
 parent._updatedata(parent.__c.False);
- //BA.debugLineNum = 957;BA.debugLine="End Sub";
+ //BA.debugLineNum = 959;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -2398,10 +2401,10 @@ if (true) break;
     }
 }
 public String  _setcurrentpage(int _p) throws Exception{
- //BA.debugLineNum = 902;BA.debugLine="Public Sub setCurrentPage(p As Int)";
- //BA.debugLineNum = 903;BA.debugLine="setFirstRowIndex((p - 1) * mRowsPerPage)";
+ //BA.debugLineNum = 903;BA.debugLine="Public Sub setCurrentPage(p As Int)";
+ //BA.debugLineNum = 904;BA.debugLine="setFirstRowIndex((p - 1) * mRowsPerPage)";
 _setfirstrowindex((int) ((_p-1)*_mrowsperpage));
- //BA.debugLineNum = 904;BA.debugLine="End Sub";
+ //BA.debugLineNum = 905;BA.debugLine="End Sub";
 return "";
 }
 public anywheresoftware.b4a.keywords.Common.ResumableSubWrapper  _setdata(anywheresoftware.b4a.objects.collections.List _data) throws Exception{
@@ -2443,7 +2446,7 @@ parent.__c.ReturnFromResumableSub(this,null);return;}
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 654;BA.debugLine="If sql1.IsInitialized Then sql1.Close";
+ //BA.debugLineNum = 655;BA.debugLine="If sql1.IsInitialized Then sql1.Close";
 if (true) break;
 
 case 1:
@@ -2463,17 +2466,17 @@ case 6:
 //C
 this.state = 7;
 ;
- //BA.debugLineNum = 656;BA.debugLine="sql1.InitializeSQLite(\"\", \":memory:\", True)";
+ //BA.debugLineNum = 657;BA.debugLine="sql1.InitializeSQLite(\"\", \":memory:\", True)";
 parent._sql1.InitializeSQLite("",":memory:",parent.__c.True);
- //BA.debugLineNum = 660;BA.debugLine="CreateTable";
+ //BA.debugLineNum = 661;BA.debugLine="CreateTable";
 parent._createtable();
- //BA.debugLineNum = 661;BA.debugLine="Dim sb As StringBuilder";
+ //BA.debugLineNum = 662;BA.debugLine="Dim sb As StringBuilder";
 _sb = new anywheresoftware.b4a.keywords.StringBuilderWrapper();
- //BA.debugLineNum = 662;BA.debugLine="sb.Initialize";
+ //BA.debugLineNum = 663;BA.debugLine="sb.Initialize";
 _sb.Initialize();
- //BA.debugLineNum = 663;BA.debugLine="sb.Append(\"INSERT INTO data VALUES (\")";
+ //BA.debugLineNum = 664;BA.debugLine="sb.Append(\"INSERT INTO data VALUES (\")";
 _sb.Append("INSERT INTO data VALUES (");
- //BA.debugLineNum = 664;BA.debugLine="For Each Column As B4XTableColumn In Columns";
+ //BA.debugLineNum = 665;BA.debugLine="For Each Column As B4XTableColumn In Columns";
 if (true) break;
 
 case 7:
@@ -2502,7 +2505,7 @@ if (true) break;
 case 9:
 //C
 this.state = 10;
- //BA.debugLineNum = 665;BA.debugLine="If Column.ColumnType = COLUMN_TYPE_VOID Then Con";
+ //BA.debugLineNum = 666;BA.debugLine="If Column.ColumnType = COLUMN_TYPE_VOID Then Con";
 if (true) break;
 
 case 10:
@@ -2523,7 +2526,7 @@ case 15:
 //C
 this.state = 36;
 ;
- //BA.debugLineNum = 666;BA.debugLine="sb.Append(\"?,\")";
+ //BA.debugLineNum = 667;BA.debugLine="sb.Append(\"?,\")";
 _sb.Append("?,");
  if (true) break;
 if (true) break;
@@ -2532,11 +2535,11 @@ case 16:
 //C
 this.state = 17;
 ;
- //BA.debugLineNum = 668;BA.debugLine="sb.Remove(sb.Length - 1, sb.Length)";
+ //BA.debugLineNum = 669;BA.debugLine="sb.Remove(sb.Length - 1, sb.Length)";
 _sb.Remove((int) (_sb.getLength()-1),_sb.getLength());
- //BA.debugLineNum = 669;BA.debugLine="sb.Append(\")\")";
+ //BA.debugLineNum = 670;BA.debugLine="sb.Append(\")\")";
 _sb.Append(")");
- //BA.debugLineNum = 670;BA.debugLine="If Data.Size > 0 Then";
+ //BA.debugLineNum = 671;BA.debugLine="If Data.Size > 0 Then";
 if (true) break;
 
 case 17:
@@ -2549,7 +2552,7 @@ this.state = 19;
 case 19:
 //C
 this.state = 20;
- //BA.debugLineNum = 671;BA.debugLine="If Data.Get(0) Is List Then";
+ //BA.debugLineNum = 672;BA.debugLine="If Data.Get(0) Is List Then";
 if (true) break;
 
 case 20:
@@ -2564,7 +2567,7 @@ this.state = 28;
 case 22:
 //C
 this.state = 23;
- //BA.debugLineNum = 672;BA.debugLine="For Each lrow As Object In Data";
+ //BA.debugLineNum = 673;BA.debugLine="For Each lrow As Object In Data";
 if (true) break;
 
 case 23:
@@ -2593,7 +2596,7 @@ if (true) break;
 case 25:
 //C
 this.state = 38;
- //BA.debugLineNum = 673;BA.debugLine="sql1.AddNonQueryToBatch(sb.ToString, lrow)";
+ //BA.debugLineNum = 674;BA.debugLine="sql1.AddNonQueryToBatch(sb.ToString, lrow)";
 parent._sql1.AddNonQueryToBatch(_sb.ToString(),(anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_lrow)));
  if (true) break;
 if (true) break;
@@ -2607,7 +2610,7 @@ this.state = 33;
 case 28:
 //C
 this.state = 29;
- //BA.debugLineNum = 676;BA.debugLine="For Each row() As Object In Data";
+ //BA.debugLineNum = 677;BA.debugLine="For Each row() As Object In Data";
 if (true) break;
 
 case 29:
@@ -2636,7 +2639,7 @@ if (true) break;
 case 31:
 //C
 this.state = 40;
- //BA.debugLineNum = 677;BA.debugLine="sql1.AddNonQueryToBatch(sb.ToString, row)";
+ //BA.debugLineNum = 678;BA.debugLine="sql1.AddNonQueryToBatch(sb.ToString, row)";
 parent._sql1.AddNonQueryToBatch(_sb.ToString(),anywheresoftware.b4a.keywords.Common.ArrayToList(_row));
  if (true) break;
 if (true) break;
@@ -2657,9 +2660,9 @@ case 34:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 682;BA.debugLine="Dim SenderFilter As Object = sql1.ExecNonQueryBat";
+ //BA.debugLineNum = 683;BA.debugLine="Dim SenderFilter As Object = sql1.ExecNonQueryBat";
 _senderfilter = parent._sql1.ExecNonQueryBatch(ba,"SQL1");
- //BA.debugLineNum = 684;BA.debugLine="Wait For (SenderFilter) SQL1_NonQueryComplete (Su";
+ //BA.debugLineNum = 685;BA.debugLine="Wait For (SenderFilter) SQL1_NonQueryComplete (Su";
 parent.__c.WaitFor("sql1_nonquerycomplete", ba, this, _senderfilter);
 this.state = 41;
 return;
@@ -2668,14 +2671,14 @@ case 41:
 this.state = -1;
 _success = (boolean) result[0];
 ;
- //BA.debugLineNum = 686;BA.debugLine="CountAll = Data.Size";
+ //BA.debugLineNum = 687;BA.debugLine="CountAll = Data.Size";
 parent._countall = _data.getSize();
- //BA.debugLineNum = 687;BA.debugLine="RefreshNow";
+ //BA.debugLineNum = 688;BA.debugLine="RefreshNow";
 parent._refreshnow();
- //BA.debugLineNum = 688;BA.debugLine="Return True";
+ //BA.debugLineNum = 689;BA.debugLine="Return True";
 if (true) {
 parent.__c.ReturnFromResumableSub(this,(Object)(parent.__c.True));return;};
- //BA.debugLineNum = 689;BA.debugLine="End Sub";
+ //BA.debugLineNum = 690;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -2685,25 +2688,25 @@ if (true) break;
 public void  _sql1_nonquerycomplete(boolean _success) throws Exception{
 }
 public String  _setfirstrowindex(int _row) throws Exception{
- //BA.debugLineNum = 882;BA.debugLine="Public Sub setFirstRowIndex (row As Int)";
- //BA.debugLineNum = 883;BA.debugLine="row = Max(0, Min(CountAll - 1, row))";
+ //BA.debugLineNum = 883;BA.debugLine="Public Sub setFirstRowIndex (row As Int)";
+ //BA.debugLineNum = 884;BA.debugLine="row = Max(0, Min(CountAll - 1, row))";
 _row = (int) (__c.Max(0,__c.Min(_countall-1,_row)));
- //BA.debugLineNum = 884;BA.debugLine="mFirstRowIndex = row";
+ //BA.debugLineNum = 885;BA.debugLine="mFirstRowIndex = row";
 _mfirstrowindex = _row;
- //BA.debugLineNum = 885;BA.debugLine="UpdateData (False)";
+ //BA.debugLineNum = 886;BA.debugLine="UpdateData (False)";
 _updatedata(__c.False);
- //BA.debugLineNum = 886;BA.debugLine="End Sub";
+ //BA.debugLineNum = 887;BA.debugLine="End Sub";
 return "";
 }
 public String  _setmousetransparent(anywheresoftware.b4a.objects.B4XViewWrapper _lbl) throws Exception{
 anywheresoftware.b4j.object.JavaObject _jo = null;
- //BA.debugLineNum = 756;BA.debugLine="Private Sub SetMouseTransparent (lbl As B4XView) '";
- //BA.debugLineNum = 758;BA.debugLine="Dim jo = lbl As JavaObject";
+ //BA.debugLineNum = 757;BA.debugLine="Private Sub SetMouseTransparent (lbl As B4XView) '";
+ //BA.debugLineNum = 759;BA.debugLine="Dim jo = lbl As JavaObject";
 _jo = new anywheresoftware.b4j.object.JavaObject();
 _jo = (anywheresoftware.b4j.object.JavaObject) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4j.object.JavaObject(), (java.lang.Object)(_lbl.getObject()));
- //BA.debugLineNum = 759;BA.debugLine="jo.RunMethod(\"setMouseTransparent\", Array(True))";
+ //BA.debugLineNum = 760;BA.debugLine="jo.RunMethod(\"setMouseTransparent\", Array(True))";
 _jo.RunMethod("setMouseTransparent",new Object[]{(Object)(__c.True)});
- //BA.debugLineNum = 761;BA.debugLine="End Sub";
+ //BA.debugLineNum = 762;BA.debugLine="End Sub";
 return "";
 }
 public String  _setpagelabelstate(anywheresoftware.b4a.objects.B4XViewWrapper _lbl,boolean _enabled) throws Exception{
@@ -2725,10 +2728,10 @@ _lbl.setTextColor(_arrowsdisabledcolor);
 return "";
 }
 public String  _settextorcsbuildertolabel(anywheresoftware.b4a.objects.B4XViewWrapper _xlbl,Object _text) throws Exception{
- //BA.debugLineNum = 763;BA.debugLine="Private Sub SetTextOrCSBuilderToLabel(xlbl As B4XV";
- //BA.debugLineNum = 765;BA.debugLine="xlbl.Text = Text";
+ //BA.debugLineNum = 764;BA.debugLine="Private Sub SetTextOrCSBuilderToLabel(xlbl As B4XV";
+ //BA.debugLineNum = 766;BA.debugLine="xlbl.Text = Text";
 _xlbl.setText(BA.ObjectToString(_text));
- //BA.debugLineNum = 775;BA.debugLine="End Sub";
+ //BA.debugLineNum = 776;BA.debugLine="End Sub";
 return "";
 }
 public String  _settexttocell(String _text,anywheresoftware.b4a.objects.B4XViewWrapper _lbl,boolean _searchable) throws Exception{
@@ -2844,8 +2847,8 @@ if (true) break;
 }
 public String  _updatesorticon() throws Exception{
 b4j.example.b4xtable._b4xtablecolumn _col = null;
- //BA.debugLineNum = 842;BA.debugLine="Private Sub UpdateSortIcon";
- //BA.debugLineNum = 843;BA.debugLine="For Each col As B4XTableColumn In Columns";
+ //BA.debugLineNum = 843;BA.debugLine="Private Sub UpdateSortIcon";
+ //BA.debugLineNum = 844;BA.debugLine="For Each col As B4XTableColumn In Columns";
 {
 final anywheresoftware.b4a.BA.IterableList group1 = _columns;
 final int groupLen1 = group1.getSize()
@@ -2853,36 +2856,36 @@ final int groupLen1 = group1.getSize()
 ;
 for (; index1 < groupLen1;index1++){
 _col = (b4j.example.b4xtable._b4xtablecolumn)(group1.Get(index1));
- //BA.debugLineNum = 844;BA.debugLine="If col.InternalSortMode <> \"\" Then";
+ //BA.debugLineNum = 845;BA.debugLine="If col.InternalSortMode <> \"\" Then";
 if ((_col.InternalSortMode /*String*/ ).equals("") == false) { 
- //BA.debugLineNum = 845;BA.debugLine="If lblSort.Parent <> col.Panel Then";
+ //BA.debugLineNum = 846;BA.debugLine="If lblSort.Parent <> col.Panel Then";
 if ((_lblsort.getParent()).equals(_col.Panel /*anywheresoftware.b4a.objects.B4XViewWrapper*/ ) == false) { 
- //BA.debugLineNum = 846;BA.debugLine="lblSort.RemoveViewFromParent";
+ //BA.debugLineNum = 847;BA.debugLine="lblSort.RemoveViewFromParent";
 _lblsort.RemoveViewFromParent();
- //BA.debugLineNum = 847;BA.debugLine="col.Panel.AddView(lblSort, 0, 0, lblSort.Width";
+ //BA.debugLineNum = 848;BA.debugLine="col.Panel.AddView(lblSort, 0, 0, lblSort.Width";
 _col.Panel /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .AddView((javafx.scene.Node)(_lblsort.getObject()),0,0,_lblsort.getWidth(),0);
  };
- //BA.debugLineNum = 849;BA.debugLine="lblSort.Top = 0";
+ //BA.debugLineNum = 850;BA.debugLine="lblSort.Top = 0";
 _lblsort.setTop(0);
- //BA.debugLineNum = 850;BA.debugLine="lblSort.Height = HeadersHeight";
+ //BA.debugLineNum = 851;BA.debugLine="lblSort.Height = HeadersHeight";
 _lblsort.setHeight(_headersheight);
- //BA.debugLineNum = 851;BA.debugLine="lblSort.Left = col.Panel.Width - lblSort.Width";
+ //BA.debugLineNum = 852;BA.debugLine="lblSort.Left = col.Panel.Width - lblSort.Width";
 _lblsort.setLeft(_col.Panel /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getWidth()-_lblsort.getWidth());
- //BA.debugLineNum = 852;BA.debugLine="lblSort.Visible = True";
+ //BA.debugLineNum = 853;BA.debugLine="lblSort.Visible = True";
 _lblsort.setVisible(__c.True);
- //BA.debugLineNum = 853;BA.debugLine="If col.InternalSortMode = \"ASC\" Then lblSort.Te";
+ //BA.debugLineNum = 854;BA.debugLine="If col.InternalSortMode = \"ASC\" Then lblSort.Te";
 if ((_col.InternalSortMode /*String*/ ).equals("ASC")) { 
 _lblsort.setText(BA.ObjectToString(__c.Chr(((int)0xf0de))));}
 else {
 _lblsort.setText(BA.ObjectToString(__c.Chr(((int)0xf0dd))));};
- //BA.debugLineNum = 854;BA.debugLine="Return";
+ //BA.debugLineNum = 855;BA.debugLine="Return";
 if (true) return "";
  };
  }
 };
- //BA.debugLineNum = 857;BA.debugLine="lblSort.Visible = False";
+ //BA.debugLineNum = 858;BA.debugLine="lblSort.Visible = False";
 _lblsort.setVisible(__c.False);
- //BA.debugLineNum = 858;BA.debugLine="End Sub";
+ //BA.debugLineNum = 859;BA.debugLine="End Sub";
 return "";
 }
 public String  _updatetablecounters() throws Exception{
